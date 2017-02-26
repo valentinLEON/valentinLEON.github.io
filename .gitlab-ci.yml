@@ -1,0 +1,9 @@
+pages:
+  stage: deploy
+  script:
+    - echo "it's done !"
+  artifacts:
+    paths:
+      - applicationCerm
+  only:
+    - master
