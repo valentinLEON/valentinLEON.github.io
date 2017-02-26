@@ -11,9 +11,6 @@
         addDialog: document.querySelector('.dialog-container')
     };
 
-    // on cache le bouton
-    document.getElementById('toggleMenu').style.visibility = 'hidden';
-
 
     /*****************************************************************************
      *
