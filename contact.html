@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
     <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
     <!-- CSS de materialize -->
     <link rel="stylesheet" type="text/css" href="styles/materialize.min.css">
 
@@ -27,9 +28,13 @@
 
 <body>
     <header class="header">
-        <a href="index.html"><h1 class="header__title">Accueil | </h1></a>
-        <a href="contact.html"><h1 class="header__title"> Contact </h1></a>
-        <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
+        <a href="index.html">
+            <h1 class="header__title">Accueil | </h1>
+        </a>
+        <a href="contact.html">
+            <h1 class="header__title"> Contact </h1>
+        </a>
+        <!--<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>-->
     </header>
 
     <main>
@@ -54,6 +59,12 @@
                                     <label for="email">Email</label>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Textarea</label>
+                                </div>
+                            </div>
                         </form>
                     </legend>
                 </div>
@@ -71,6 +82,7 @@
     <script src="scripts/app.js" async></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/navigationDrawer.js"></script>
 
 </body>
 

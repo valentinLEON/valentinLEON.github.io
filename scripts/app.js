@@ -18,10 +18,10 @@
      *
      ****************************************************************************/
 
-    document.getElementById('butRefresh').addEventListener('click', function() {
-        // Refresh all of the forecasts
-        app.updateForecasts();
-    });
+    // document.getElementById('butRefresh').addEventListener('click', function() {
+    //     // Refresh all of the forecasts
+    //     app.updateForecasts();
+    // });
 
     /*****************************************************************************
      *
