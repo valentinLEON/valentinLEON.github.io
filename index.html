@@ -7,6 +7,7 @@
     <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
     <link rel="stylesheet" type="text/css" href="styles/app.css">
     <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <link rel="stylesheet" type="text/css" href="styles/materialize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Cerm</title>
 
@@ -24,99 +25,33 @@
 </head>
 
 <body>
-    <div class="area"></div>
-    <nav class="main-menu">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="fa fa-home fa-2x"></i>
-                    <span class="nav-text">
-                            Dashboard
-                        </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-laptop fa-2x"></i>
-                    <span class="nav-text">
-                            UI Components
-                        </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-list fa-2x"></i>
-                    <span class="nav-text">
-                            Forms
-                        </span>
-                </a>
-
-            </li>
-            <li class="has-subnav">
-                <a href="#">
-                    <i class="fa fa-folder-open fa-2x"></i>
-                    <span class="nav-text">
-                            Pages
-                        </span>
-                </a>
-
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-bar-chart-o fa-2x"></i>
-                    <span class="nav-text">
-                            Graphs and Statistics
-                        </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-font fa-2x"></i>
-                    <span class="nav-text">
-                            Typography and Icons
-                        </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-table fa-2x"></i>
-                    <span class="nav-text">
-                            Tables
-                        </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-map-marker fa-2x"></i>
-                    <span class="nav-text">
-                            Maps
-                        </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-info fa-2x"></i>
-                    <span class="nav-text">
-                            Documentation
-                        </span>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="logout">
-            <li>
-                <a href="#">
-                    <i class="fa fa-power-off fa-2x"></i>
-                    <span class="nav-text">
-                            Logout
-                        </span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
+    <header>
+        <nav>
+            <ul id="slide-out" class="side-nav">
+                <li>
+                    <div class="userView">
+                        <div class="background">
+                            <img src="images/abstract.jpg">
+                        </div>
+                        <a href="#!user"><img class="circle" src="images/ER.jpg"></a>
+                        <a href="#!name"><span class="white-text name">Je code avec le Q</span></a>
+                        <a href="#!email"><span class="white-text email">jecodeavecleq@gmail.com</span></a>
+                    </div>
+                </li>
+                <li><a href="#!">Home</a></li>
+                <li><a href="#!">A propos de moi</a></li>
+                <li><a href="#!">Expériences professionnelles</a></li>
+                <li><a href="#!">Formations</a></li>
+                <li><a href="#!">Compétences</a></li>
+                <li><a href="#!">Réalisations</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="waves-effect" href="#!">Contact</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-nav-menu">toto</i></a>
+        </nav>
+    </header>
     <main class="main">
         <div class="card cardTemplate skill" hidden>
             <div class="name-key" hidden></div>
@@ -124,26 +59,8 @@
             <div class="name"></div>
             <i class="fa fa-5x" aria-hidden="true"></i>
             <div class="description"></div>
-            <br>
             <hr>
-            <br>
             <div class="period"></div>
-        </div>
-
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card blue-grey darken-1 cardTemplate skill">
-                    <div class="name-key" hidden></div>
-                    <div class="card-last-updated" hidden></div>
-                    <div class="card-content white-text">
-                        <span class="card-title name"></span>
-                        <p class="description"></p>
-                    </div>
-                    <div class="card-action">
-                        <div class="period">This is a link</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
 

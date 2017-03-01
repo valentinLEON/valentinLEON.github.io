@@ -1,13 +1,5 @@
-// ouverture du menu
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-// fermeture du menu
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
-}
+$('.button-collapse').sideNav({
+    menuWidth: 300, // Default is 240
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+});
+$('.collapsible').collapsible();
