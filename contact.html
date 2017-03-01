@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/app.css">
     <!-- CSS de materialize -->
     <link rel="stylesheet" type="text/css" href="styles/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Cerm</title>
@@ -27,14 +28,35 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="index.html">
-            <h1 class="header__title">Accueil | </h1>
-        </a>
-        <a href="contact.html">
-            <h1 class="header__title"> Contact </h1>
-        </a>
-        <!--<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>-->
+    <header>
+        <nav>
+            <ul id="slide-out" class="side-nav">
+                <li>
+                    <div class="userView">
+                        <div class="background">
+                            <img src="images/abstract.jpg">
+                        </div>
+                        <a href="#!user"><img class="circle" src="images/ER.jpg"></a>
+                        <a href="#!name"><span class="white-text name">Je code avec le Q</span></a>
+                        <a href="#!email"><span class="white-text email">jecodeavecleq@gmail.com</span></a>
+                    </div>
+                </li>
+                <li class="waves-effect"><a href="#!">Home</a></li>
+                <li><a href="about.html">A propos de moi</a></li>
+                <li><a href="experience.html">Expériences professionnelles</a></li>
+                <li><a href="schooling.html">Formations</a></li>
+                <li><a href="skill.html">Compétences</a></li>
+                <li><a href="creation.html">Réalisations</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="waves-effect" href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <!--<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>-->
+            <span class="titleMenu">Application CV</span>
+            <span class="onCenter">Contact</span>
+        </nav>
     </header>
 
     <main>
@@ -61,22 +83,35 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Textarea</label>
+                                    <input id="subject" type="text" class="validate">
+                                    <label for="subject">Sujet</label>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="input-field col s12 ">
+                                    <textarea id="textarea1 " class="materialize-textarea "></textarea>
+                                    <label for="textarea1 ">Textarea</label>
                                 </div>
                             </div>
                         </form>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer<i class="material-icons right">send</i></button>
                     </legend>
                 </div>
             </div>
         </div>
     </main>
 
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            © 2017 Copyright Valentin LEON &amp; Nicolas ORLANDINI
+        </div>
+    </footer>
+
     <!-- Uncomment the line below when ready to test with fake data -->
-    <script src="scripts/app.js" async></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="scripts/materialize.min.js"></script>
-    <script src="scripts/navigationDrawer.js"></script>
+    <script src="scripts/app.js " async></script>
+    <script type="text/javascript " src="https://code.jquery.com/jquery-3.1.1.min.js "></script>
+    <script src="scripts/materialize.min.js "></script>
+    <script src="scripts/navigationDrawer.js "></script>
 
 </body>
 

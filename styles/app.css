@@ -1,21 +1,30 @@
-a.button-collapse.top-nav i {
-    font-size: 32px;
+/* Classes objets persos */
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
+.description {
+    margin-left: 20px;
+}
+
+.period {
+    font-family: "bttf";
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    margin-bottom: 250px;
+    margin-left: -200px;
 }
 
 .card {
@@ -28,48 +37,42 @@ nav {
     background-color: orange !important;
 }
 
-.mdi-nav-menu {
-    content: "\e8af";
-}
-
 nav .button-collapse i {
     font-size: 2.7rem;
     height: 56px;
     line-height: 56px;
 }
 
-nav i,
-nav [class^="mdi-"],
-nav [class*="mdi-"],
-nav i.material-icons {
-    display: block;
-    font-size: 2rem;
-    height: 56px;
+.onCenter {
+    float: right;
+    margin-right: 45%;
+    font-weight: bold;
+    font-size: 27px;
+    color: black;
 }
 
-[class^="mdi-"]:before,
-[class*="mdi-"]:before {
-    display: inline-block;
-    speak: none;
-    text-decoration: inherit;
+.titleMenu {
+    margin-left: 15px;
+    font-size: 18px;
 }
 
-[class^="mdi-"],
-[class*="mdi-"] {
-    speak: none;
-    font-family: "Material-Design-Icons";
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
+main {
+    flex: 1 0 auto;
+}
+
+footer.page-footer {
+    width: 100%;
+    padding-top: 20 !important;
+    background-color: orange !important;
+}
+
+.footer-copyright {
+    padding-left: 15px !important;
+    background-color: darkorange !important;
 }
