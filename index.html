@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/app.css">
     <link rel="stylesheet" type="text/css" href="styles/inline.css">
     <link rel="stylesheet" type="text/css" href="styles/materialize.css">
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Cerm</title>
@@ -57,10 +58,51 @@
         </nav>
     </header>
     <main class="main">
-        <div class="loader">
-            <svg viewbox="0 0 32 32" width="32" height="32">
-                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-            </svg>
+        <div class="col s12 m7">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img style="width:100px; height:150px;" src="/images/tardis.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>PRENOM</p>
+                        <p>NOM</p>
+                    </div>
+                    <div class="card-action">
+                        <p>Bow ties are cool</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerParent">
+            <div class="inner box1"></div>
+            <div class="inner box2"></div>
+            <div class="inner box3"></div>
+        </div>
+
+        <div class="customCardView" z-default=10 z-hover=30>
+            <p class="valign">You've swallowed a planet! Heh-haa! Super squeaky bum time! Did I mention we have comfy chairs? You've swallowed a planet! Did I mention we have comfy chairs? No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor.
+                Don't call me the Rotmeister. Did I mention we have comfy chairs? You hate me; you want to kill me! Well, go on! Kill me! KILL ME! You hit me with a cricket bat. Father Christmas. Santa Claus. Or as I've always known him: Jeff. You've
+                swallowed a planet! You hate me; you want to kill me! Well, go on! Kill me! KILL ME!</p>
+        </div>
+
+        <div class="grid">
+            <div class="one-one parent">
+                <img class="center-align" src="/images/icons/facebook.png" alt="">
+            </div>
+
+            <div class="one-two parent">
+                <img class="center-align" src="/images/icons/googleplus.png" alt="">
+            </div>
+
+            <div class="two-one parent">
+                <img class="center-align" src="/images/icons/snapchat.png" alt="">
+            </div>
+
+            <div class="two-two parent">
+                <img class="center-align" src="/images/icons/twitter.png" alt="">
+            </div>
         </div>
     </main>
 
@@ -97,6 +139,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="scripts/materialize.min.js"></script>
     <script src="scripts/navigationDrawer.js"></script>
+    <script src="scripts/customCardView.js"></script>
 
 </body>
 
