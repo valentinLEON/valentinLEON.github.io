@@ -28,13 +28,13 @@ a {
 }
 
 .card {
-    margin-top: 50px !important;
+    margin-top: 30px !important;
     margin-left: 15px !important;
     margin-right: 15px !important;
 }
 
 nav {
-    background-color: orange !important;
+    background-color: #ff6500 !important;
 }
 
 nav .button-collapse i {
@@ -69,21 +69,21 @@ main {
 footer.page-footer {
     width: 100%;
     padding-top: 20 !important;
-    background-color: orange !important;
+    background-color: #ff7b00 !important;
 }
 
 .footer-copyright {
     padding-left: 15px !important;
-    background-color: darkorange !important;
+    background-color: #ff6500 !important;
 }
 
 .btn {
-    background-color: orange !important;
+    background-color: #ff7b00 !important;
 }
 
-@media screen and (min-width: 640px) {
-    /* on affiche le menu si c'est pas un smartphone */
+/*@media screen and (min-width: 640px) {
+    /* on affiche le menu si c'est pas un smartphone 
     ul#slide-out.side-nav {
         transform: translateX(0%) !important;
     }
-}
+}*/
