@@ -19,13 +19,6 @@ a {
     color: white;
 }
 
-.content {
-    position: absolute;
-    top: 25%;
-    left: 45%;
-    margin-bottom: 250px;
-    margin-left: -200px;
-}
 
 .card {
     margin-top: 30px !important;

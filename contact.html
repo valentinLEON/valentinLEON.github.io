@@ -60,41 +60,44 @@
     </header>
 
     <main>
-        <div class="content">
+        <div class="content" style="margin-top: -150px;" >
             <div class="row">
-                <legend>
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="first_name" type="text" class="validate">
-                                <label for="last_name">Prénom</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Nom</label>
-                            </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" class="validate">
+                            <label for="last_name">Prénom</label>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Nom</label>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="subject" type="text" class="validate">
-                                <label for="subject">Sujet</label>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
                         </div>
-                        <div class="row ">
-                            <div class="input-field col s12 ">
-                                <textarea id="textarea1 " class="materialize-textarea "></textarea>
-                                <label for="textarea1 ">Message</label>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">subject</i>
+                            <input id="subject" type="text" class="validate">
+                            <label for="subject">Sujet</label>
                         </div>
-                    </form>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer<i class="material-icons right">send</i></button>
-                </legend>
+                    </div>
+                    <div class="row ">
+                        <div class="input-field col s12 ">
+                            <i class="material-icons prefix">message</i>
+                            <textarea id="textarea1 " class="materialize-textarea "></textarea>
+                            <label for="textarea1 ">Message</label>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer<i class="material-icons right">send</i></button>
             </div>
         </div>
     </main>
