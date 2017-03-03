@@ -80,3 +80,10 @@ footer.page-footer {
 .btn {
     background-color: orange !important;
 }
+
+@media screen and (min-width: 640px) {
+    /* on affiche le menu si c'est pas un smartphone */
+    ul#slide-out.side-nav {
+        transform: translateX(0%) !important;
+    }
+}

@@ -2,7 +2,7 @@
  * Attention à la version de l'application
  */
 // nom du cache
-var cacheName = 'cerm v0.9';
+var cacheName = 'cerm v0.7';
 // fichiers à mettre en cache
 var filesToCache = [
     '/',
@@ -48,6 +48,7 @@ self.addEventListener('activate', function(e) {
     return self.clients.claim();
 });
 
+// affiche les éléments du cache
 self.addEventListener('fetch', function(e) {
     console.log('[ServiceWorker] Fetch', e.request.url);
     e.respondWith(
