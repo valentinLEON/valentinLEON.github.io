@@ -55,6 +55,7 @@ body {
 
 main {
     flex: 1 0 auto !important;
+    margin-top: 70px;
 }
 
 footer.page-footer {

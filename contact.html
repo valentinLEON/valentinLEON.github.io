@@ -29,29 +29,29 @@
 
 <body>
     <header>
-        <nav>
-            <ul id="slide-out" class="side-nav">
-                <li>
-                    <div class="userView">
-                        <div class="background">
-                            <img src="images/abstract.jpg">
-                        </div>
-                        <a href="#!user"><img class="circle" src="images/ER.jpg"></a>
-                        <a href="#!name"><span class="white-text name">Je code avec le Q</span></a>
-                        <a href="#!email"><span class="white-text email">jecodeavecleq@gmail.com</span></a>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img src="images/abstract.jpg">
                     </div>
-                </li>
-                <li><a class="waves-effect" href="index.html">Home</a></li>
-                <li><a class="waves-effect" href="about.html">A propos de moi</a></li>
-                <li><a class="waves-effect" href="experience.html">Expériences professionnelles</a></li>
-                <li><a class="waves-effect" href="schooling.html">Formations</a></li>
-                <li><a class="waves-effect" href="skill.html">Compétences</a></li>
-                <li><a class="waves-effect" href="creation.html">Réalisations</a></li>
-                <li>
-                    <div class="divider"></div>
-                </li>
-                <li><a class="waves-effect" href="contact.html">Contact</a></li>
-            </ul>
+                    <a href="#!user"><img class="circle" src="images/ER.jpg"></a>
+                    <a href="#!name"><span class="white-text name">Je code avec le Q</span></a>
+                    <a href="#!email"><span class="white-text email">jecodeavecleq@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a class="waves-effect" href="index.html">Home</a></li>
+            <li><a class="waves-effect" href="about.html">A propos de moi</a></li>
+            <li><a class="waves-effect" href="experience.html">Expérience professionnelle</a></li>
+            <li><a class="waves-effect" href="schooling.html">Formations</a></li>
+            <li><a class="waves-effect" href="skill.html">Compétences</a></li>
+            <li><a class="waves-effect" href="creation.html">Réalisations</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="contact.html">Contact</a></li>
+        </ul>
+        <nav style="position: fixed; z-index:1;">
             <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
             <span class="left hide-on-med-and-down">CV</span>
             <span class="titre left hide-on-large-only">Contact</span>
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </form>
-                <button id="btnSend" class="btn waves-effect waves-light" type="submit" name="action">Envoyer<i class="material-icons right">send</i></button>
+                <button style="z-index: -1;" id="btnSend" class="btn waves-effect waves-light" type="submit" name="action">Envoyer<i class="material-icons right">send</i></button>
             </div>
         </div>
     </main>
@@ -135,7 +135,7 @@
     <script type="text/javascript" src="/scripts/sWorker.js"></script>
     <script src="scripts/navigationDrawer.js "></script>
     <script type="text/javascript">
-        $("#btnSend").click(function() {
+        $("#btnSend").click(function () {
             window.open('mailto:valentin.leon0@gmail.com?subject=' + document.getElementById("subject") + '&body=' + document.getElementById("message") + '');
         });
     </script>
