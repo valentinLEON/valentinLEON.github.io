@@ -20,7 +20,7 @@ main {
     float: right;
     width: 50%;
     height: 200px;
-    background-color: #db4437;
+    background-color: #0077B5;
 }
 
 .two-one {
@@ -28,7 +28,7 @@ main {
     float: left;
     width: 50%;
     height: 200px;
-    background-color: #FFFC00;
+    background-color: #db4437;
 }
 
 .two-two {
@@ -79,4 +79,9 @@ main {
     overflow-y: hidden;
     margin: 0;
     background-color: white !important;
+}
+
+.customIcon {
+    color: white;
+    margin-left: 43%;
 }
