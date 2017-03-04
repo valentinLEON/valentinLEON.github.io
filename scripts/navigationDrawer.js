@@ -4,8 +4,3 @@ $('.button-collapse').sideNav({
     draggable: true
 });
 $('.collapsible').collapsible();
-
-$(document).ready(function() {
-    console.log('ottotoottoto');
-    console.log($('nav').find('.side-nav').width());
-});

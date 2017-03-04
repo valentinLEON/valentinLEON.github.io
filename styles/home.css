@@ -63,15 +63,15 @@ main {
 }
 
 .box1 {
-    background-color: darkmagenta;
+    background-color: #8a398a;
 }
 
 .box2 {
-    background-color: blue;
+    background-color: #5050f5;
 }
 
 .box3 {
-    background-color: red;
+    background-color: #cd2e2e;
 }
 
 .customCardView {
