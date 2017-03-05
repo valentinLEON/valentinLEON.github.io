@@ -109,3 +109,12 @@ div .card.cardTemplate::after {
     left: calc(50% - 1px);
     top: calc(50% + 35px);
 }
+
+@media screen and (max-width: 450px) {
+    .scott {
+        margin-left: 25% !important;
+    }
+    .githubLink {
+        font-size: 12px;
+    }
+}
