@@ -85,3 +85,12 @@ main {
     color: white;
     margin-left: 43%;
 }
+
+.customPhone {
+    font-size: 3em;
+}
+
+.avatarHome {
+    width: 100px !important;
+    height: 100px !important;
+}
