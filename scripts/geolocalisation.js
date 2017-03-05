@@ -8,7 +8,7 @@ function initMap() {
     });
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
@@ -22,7 +22,7 @@ function initMap() {
             // infoWindow.setPosition(pos);
             marker.setMap(map);
             map.setCenter(pos);
-        }, function() {
+        }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
         });
     } else {
@@ -36,4 +36,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setContent(browserHasGeolocation ?
         'Error: Le service de géolocalisation a failed.' :
         'Error: Votre navigateur ne supporte pas le service de navigation.');
+}
+
+function hideCloseButton(id) {
+    document.getElementById(id).style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+}
+
+function showCloseButton(id) {
+    document.getElementById(id).style.display = 'inline-block';
 }

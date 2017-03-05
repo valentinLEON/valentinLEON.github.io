@@ -114,23 +114,23 @@
                                 <p>ORLANDINI</p>
                             </div>
                             <div class="card-action">
-                                <p><i>La vérité est ailleurs</i> - Fox Mulder</p>
+                                <p><i>The truth is out there</i> - Fox Mulder</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"
+            onClick="hideCloseButton('closeBtn');"><i class="material-icons">close</i></a>
         <div class="containerParent">
-            <div id="map"></div>
-
+            <div id="map" ></div>
             <div class="inner box1">
                 <a href="#"><span class="parent"><i class="medium material-icons customIcon">view_list</i></span></a>
             </div>
 
             <div class="inner box2">
-                <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon">location_on</i></span></a>
+                <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
             </div>
 
             <div class="inner box3">
@@ -210,7 +210,8 @@
     <script src="scripts/navigationDrawer.js"></script>
     <script src="scripts/customCardView.js"></script>
     <script type="text/javascript" src="scripts/geolocalisation.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async
+        defer></script>
 
 </body>
 
