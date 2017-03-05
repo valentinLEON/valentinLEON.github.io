@@ -120,7 +120,7 @@
      */
     var updateExperiences = {
         key: '2459115',
-        name: 'Expérience 1',
+        name: 'Apprenti développeur .NET',
         created: '2017-02-26T18:13:00Z',
         keyword: [
             "cv",
@@ -131,8 +131,8 @@
             "Base de Données",
             "Publication Play Store"
         ],
-        description: "Ma première expérience professionnelle.",
-        period: "2016 - 2017",
+        description: "InnovationCRM.",
+        period: "Octobre 2016 - Septembre 2017",
         code: 1
     };
     // TODO uncomment line below to test app with fake data

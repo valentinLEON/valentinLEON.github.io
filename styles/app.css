@@ -19,7 +19,6 @@ a {
     color: white;
 }
 
-
 .card {
     margin-top: 30px !important;
     margin-left: 15px !important;
@@ -33,9 +32,9 @@ nav {
 }
 
 nav .button-collapse i {
-    font-size: 2.7rem  !important;
-    height: 56px  !important;
-    line-height: 56px !important ;
+    font-size: 2.7rem !important;
+    height: 56px !important;
+    line-height: 56px !important;
 }
 
 .onCenter {
@@ -80,3 +79,13 @@ footer.page-footer {
 .card-reveal {
     z-index: 0 !important;
 }
+
+a.customAction {
+    color: white !important;
+}
+
+a.customAction:hover {
+    color: #ff7b00 !important;
+}
+
+div .card.cardTemplate {}
