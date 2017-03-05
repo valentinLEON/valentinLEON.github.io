@@ -22,6 +22,7 @@
     <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
     <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#51A7F9">
+    <!--<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer></script>key=AIzaSyAbRGiaJKtm4P8vAxhycfL9WT2meSir6gotrue-->
 
 </head>
 
@@ -122,13 +123,14 @@
         </div>
 
         <div class="containerParent">
+            <div id="map"></div>
 
             <div class="inner box1">
                 <a href="#"><span class="parent"><i class="medium material-icons customIcon">view_list</i></span></a>
             </div>
 
             <div class="inner box2">
-                <a href="#"><span class="parent"><i class="medium material-icons customIcon">location_on</i></span></a>
+                <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon">location_on</i></span></a>
             </div>
 
             <div class="inner box3">
@@ -202,10 +204,14 @@
     <!-- Uncomment the line below when ready to test with fake data -->
     <!--<script src="scripts/app.js" async></script>-->
     <script type="text/javascript" src="/scripts/sWorker.js"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="scripts/home.js"></script>
     <script src="scripts/materialize.min.js"></script>
     <script src="scripts/navigationDrawer.js"></script>
     <script src="scripts/customCardView.js"></script>
+    <script type="text/javascript" src="scripts/geolocalisation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer></script>
 
 </body>
 
