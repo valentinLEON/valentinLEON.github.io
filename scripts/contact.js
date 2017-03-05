@@ -5,7 +5,7 @@ $('#btnSend').click(function() {
         data: {
             'key': 'WPGvXk3CZAHrZ11V0c0-2A',
             'message': {
-                'from_email': 'valentin.leon0@gmail.com',
+                'from_email': $('.email'),
                 'to': [{
                     'email': $('.email').val(),
                     'name': $('.name').val(),
@@ -23,7 +23,8 @@ $('#btnSend').click(function() {
                     }]
                 }],
                 'autotext': 'true',
-                'subject': 'EMAIL_SUBJECT_GOES_HERE',
+                'subject': $('.subject').val(),
+                'html': $('.message').val()
             }
         }
     }).done(function(response) {
