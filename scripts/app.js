@@ -131,8 +131,8 @@
             "Base de Données",
             "Publication Play Store"
         ],
-        description: "InnovationCRM.",
-        period: "Octobre 2016 - Septembre 2017",
+        description: "Exolink",
+        period: "Avril 2015 - Nov. 2016",
         code: 1
     };
     // TODO uncomment line below to test app with fake data

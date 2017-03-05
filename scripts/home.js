@@ -10,3 +10,10 @@ $("#location").click(function() {
     $("#map").show();
     $(".containerParent").height(400);
 });
+
+$("#closeBtn").click(function() {
+    $("#map").hide();
+    $(".inner").show();
+    $("#closeBtn").hide();
+    $(".containerParent").height(150);
+});
