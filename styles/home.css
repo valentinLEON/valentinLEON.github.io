@@ -101,6 +101,24 @@ main {
         margin-top: 30% !important;
     }
     .spanPhone {
-        margin-left: 8% !important;
+        margin-left: 9% !important;
+        font-size: 20px !important;
+    }
+    .avatarHome {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    .city {
+        margin-left: 23% !important;
+    }
+    .iconPhone {
+        margin-left: 11% !important;
+        font-size: 15px !important;
+    }
+    .address {
+        margin-left: 10% !important;
+    }
+    .telephone {
+        font-size: 15px !important;
     }
 }
