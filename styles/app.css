@@ -76,3 +76,7 @@ footer.page-footer {
 .titre {
     font-size: 20px !important;
 }
+
+.card-reveal {
+    z-index: 0 !important;
+}
