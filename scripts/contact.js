@@ -15,11 +15,11 @@ $('#btnSend').click(function() {
                 'merge_vars': [{
                     'rcpt': $('.email').val(),
                     'vars': [{
-                        'name': 'COOLFRIEND',
-                        "content": 'Mike'
+                        'name': 'PILGRIM',
+                        "content": 'Scott'
                     }, {
                         'name': 'YEARS',
-                        'content': '27'
+                        'content': '25'
                     }]
                 }],
                 'autotext': 'true',
