@@ -72,7 +72,7 @@
     <main class="main">
         <div class="row" style="margin-top:80px;">
             <div class="col s6">
-                <div class="card-panel teal" style="height:500px !important;">
+                <div class="card-panel teal ercagrossitValentin" style="height:500px;">
                     <!-- card view valentin -->
                     <img style="width:75px; height:125px;" src="/images/scott.png">
                     <div class="infoVal" style="float:right; margin-top:15px;">
@@ -80,18 +80,75 @@
                         31 Avenue Frédéric Mistral - 06130 Grasse<br>
                         <i class="small material-icons iconPhone" style="top:15px;">phone</i>06.73.17.49.70</span>
                     </div>
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
-                    <div class="containerParent">
-                        <div id="map"></div>
-                        <div class="inner box1">
-                            <a href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnValentin" onclick="hideCloseButton('closeBtnValentin');" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+                    <div class="containerParentValentin">
+                        <div id="mapValentin"></div>
+                        <div class="innerValentin box1">
+                            <a id="about" href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
                         </div>
 
-                        <div class="inner box2">
-                            <a href="#"><span class="parent"><i id="location" class="small material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
+                        <div class="innerValentin box2">
+                            <a href="#"><span class="parent"><i id="locationValentin" class="small material-icons customIcon" onclick="showCloseButton('closeBtnValentin');">location_on</i></span></a>
                         </div>
 
-                        <div class="inner box3">
+                        <div class="innerValentin box3">
+                            <a href="/contact.html"><span class="parent"><i class="small material-icons customIcon">email</i></span></a>
+                        </div>
+                    </div>
+
+                    <button style="margin-left:30%;margin-top:15px;margin-bottom:15px;" class="btn waves-effect waves-light" type="submit" name="action">En savoir plus
+                        <i class="material-icons right">info</i>
+                    </button>
+
+                    <div class="grid" style="margin-bottom:15px;">
+                        <a href="https://www.facebook.com/val.leon.10" target="_blank">
+                            <div class="one-one parent">
+                                <img class="center-align" src="/images/icons/facebook.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/valentin-leon-5a423a88/">
+                            <div class="one-two parent">
+                                <img class="center-align" src="/images/icons/linkedin.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="two-one parent">
+                                <img class="center-align" src="/images/icons/googleplus.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="https://twitter.com/SinguFuret" target="_blank">
+                            <div class="two-two parent">
+                                <img class="center-align" src="/images/icons/twitter.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <!-- ******* -->
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="card-panel teal cmcagrossitNicolas" style="height:500px;">
+                    <!-- nicolas -->
+                    <img style="width:75px; height:125px;" src="/images/tardis.png">
+                    <div class="infoVal" style="float:right; margin-top:15px;">
+                        <span style="font-size:20px;">Nicolas ORLANDINI<br>
+                        24 Avenue Saint Barthélémy - 06100 Nice<br>
+                        <i class="small material-icons iconPhone" style="top:15px;">phone</i>06.20.70.30.04</span>
+                    </div>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnNicolas" onclick="hideCloseButton('closeBtnNicolas');" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+                    <div class="containerParentNicolas">
+                        <div id="mapNicolas"></div>
+                        <div class="innerNicolas box1">
+                            <a id="about" href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
+                        </div>
+
+                        <div class="innerNicolas box2">
+                            <a href="#"><span class="parent"><i id="locationNicolas" class="small material-icons customIcon" onclick="showCloseButton('closeBtnNicolas');">location_on</i></span></a>
+                        </div>
+
+                        <div class="innerNicolas box3">
                             <a href="/contact.html"><span class="parent"><i class="small material-icons customIcon">email</i></span></a>
                         </div>
                     </div>
@@ -119,64 +176,7 @@
                             </div>
                         </a>
 
-                        <a href="https://twitter.com/SinguFuret" target="_blank">
-                            <div class="two-two parent">
-                                <img class="center-align" src="/images/icons/twitter.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <!-- ******* -->
-                </div>
-            </div>
-            <div class="col s6">
-                <div class="card-panel teal" style="height:500px !important;">
-                    <!-- nicolas -->
-                    <img style="width:75px; height:125px;" src="/images/tardis.png">
-                    <div class="infoVal" style="float:right; margin-top:15px;">
-                        <span style="font-size:20px;">Nicolas ORLANDINI<br>
-                        24 Avenue Saint Barthélémy - 06100 Nice<br>
-                        <i class="small material-icons iconPhone" style="top:15px;">phone</i>Shit on me</span>
-                    </div>
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
-                    <div class="containerParentNicolas">
-                        <div id="map"></div>
-                        <div class="inner">
-                            <a href="/about.html"><span class="parent"><i class="medium material-icons customIcon">perm_identity</i></span></a>
-                        </div>
-
-                        <div class="inner">
-                            <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
-                        </div>
-
-                        <div class="inner">
-                            <a href="/contact.html"><span class="parent"><i class="medium material-icons customIcon">email</i></span></a>
-                        </div>
-                    </div>
-
-                    <button style="margin-left:30%;margin-top:15px;margin-bottom:15px;" class="btn waves-effect waves-light" type="submit" name="action">En savoir plus
-                        <i class="material-icons right">info</i>
-                    </button>
-
-                    <div class="grid" style="margin-bottom:15px;">
-                        <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
-                            <div class="one-one parent">
-                                <img class="center-align" src="/images/icons/facebook.png" alt="">
-                            </div>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/nicolas-orlandini-1b3871129/?locale=fr_FR">
-                            <div class="one-two parent">
-                                <img class="center-align" src="/images/icons/linkedin.png" alt="">
-                            </div>
-                        </a>
-
                         <a href="#">
-                            <div class="two-one parent">
-                                <img class="center-align" src="/images/icons/googleplus.png" alt="">
-                            </div>
-                        </a>
-
-                        <a href="https://twitter.com/SinguFuret" target="_blank">
                             <div class="two-two parent">
                                 <img class="center-align" src="/images/icons/twitter.png" alt="">
                             </div>
@@ -225,8 +225,7 @@
     <script src="scripts/navigationDrawer.js"></script>
     <script src="scripts/customCardView.js"></script>
     <script type="text/javascript" src="scripts/geolocalisation.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async
-        defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async defer></script>
     <script src="scripts/alertify.js"></script>
 
 </body>

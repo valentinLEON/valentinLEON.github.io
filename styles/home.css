@@ -54,7 +54,7 @@ main {
     height: 100%
 }
 
-.containerParent {
+.containerParentValentin {
     display: table;
     table-layout: fixed;
     width: 100%;
@@ -72,23 +72,19 @@ main {
     display: table-cell;
 }
 
-.containerParent div {
+.containerParentValentin div {
     display: table-cell;
-    /*height: 150px;*/
 }
 
 .box1 {
-    width: 75px; height: 75px !important;
     background-color: #8a398a;
 }
 
 .box2 {
-    width: 75px; height: 75px !important;
     background-color: #5050f5;
 }
 
 .box3 {
-    width: 75px; height: 75px !important;
     background-color: #cd2e2e;
 }
 
@@ -111,7 +107,8 @@ main {
 .avatarHome {
     /*width: 100px !important;
     height: 100px !important;*/
-    width: 50px !important; height: 50px !important;
+    width: 50px !important;
+    height: 50px !important;
 }
 
 .fullWidth {
@@ -125,7 +122,7 @@ main {
 }
 
 .telephone {
-        font-size: 15px !important;
+    font-size: 15px !important;
 }
 
 @media screen and (max-width: 450px) {
