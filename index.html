@@ -44,21 +44,6 @@
                 </a>
             </li>
             <li>
-                <a class="waves-effect" href="about.html">
-                    <i class="material-icons prefix">account_circle</i> A propos de moi
-                </a>
-            </li>
-            <li>
-                <a class="waves-effect" href="experience.html">
-                    <i class="material-icons prefix">work</i> Expérience professionnelle
-                </a>
-            </li>
-            <li>
-                <a class="waves-effect" href="schooling.html">
-                    <i class="material-icons prefix">school</i> Formations
-                </a>
-            </li>
-            <li>
                 <a class="waves-effect" href="skill.html">
                     <i class="material-icons prefix">lightbulb_outline</i> Compétences
                 </a>
@@ -85,91 +70,122 @@
         </nav>
     </header>
     <main class="main">
-        <div class="col s12 m7" style="margin-top:100px;">
-            <div class="card horizontal">
-                <div class="card-image">
-                    <img style="width:100px; height:150px;" src="/images/scott.png">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <p>Valentin</p>
-                        <p>LEON</p>
+        <div class="row" style="margin-top:80px;">
+            <div class="col s6">
+                <div class="card-panel teal" style="height:500px !important;">
+                    <!-- card view valentin -->
+                    <img style="width:75px; height:125px;" src="/images/scott.png">
+                    <div class="infoVal" style="float:right; margin-top:15px;">
+                        <span style="font-size:20px;">Valentin LEON<br>
+                        31 Avenue Frédéric Mistral - 06130 Grasse<br>
+                        <i class="small material-icons iconPhone" style="top:15px;">phone</i>06.73.17.49.70</span>
                     </div>
-                    <div class="card-action">
-                        <p><i>Bow ties are cool</i> - The Doctor</p>
-                    </div>
-                </div>
-                <span class="card-title activator" style="color:black;"><i class="material-icons right">more_vert</i></span>
-
-                <div class="card-reveal" style="overflow:hidden;">
-                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                    <div class="horizontal">
-                        <div class="card-image" style="float:left;">
-                            <img style="width:100px; height:150px;" src="/images/tardis.png">
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+                    <div class="containerParent">
+                        <div id="map"></div>
+                        <div class="inner box1">
+                            <a href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>Nicolas</p>
-                                <p>ORLANDINI</p>
-                            </div>
-                            <div class="card-action">
-                                <p><i>The truth is out there</i> - Fox Mulder</p>
-                            </div>
+
+                        <div class="inner box2">
+                            <a href="#"><span class="parent"><i id="location" class="small material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
+                        </div>
+
+                        <div class="inner box3">
+                            <a href="/contact.html"><span class="parent"><i class="small material-icons customIcon">email</i></span></a>
                         </div>
                     </div>
+
+                    <button style="margin-left:30%;margin-top:15px;margin-bottom:15px;" class="btn waves-effect waves-light" type="submit" name="action">En savoir plus
+                        <i class="material-icons right">info</i>
+                    </button>
+
+                    <div class="grid" style="margin-bottom:15px;">
+                        <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
+                            <div class="one-one parent">
+                                <img class="center-align" src="/images/icons/facebook.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/nicolas-orlandini-1b3871129/?locale=fr_FR">
+                            <div class="one-two parent">
+                                <img class="center-align" src="/images/icons/linkedin.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="two-one parent">
+                                <img class="center-align" src="/images/icons/googleplus.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="https://twitter.com/SinguFuret" target="_blank">
+                            <div class="two-two parent">
+                                <img class="center-align" src="/images/icons/twitter.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <!-- ******* -->
                 </div>
             </div>
-        </div>
-        <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
-        <div class="containerParent">
-            <div id="map"></div>
-            <div class="inner box1">
-                <a href="/about.html"><span class="parent"><i class="medium material-icons customIcon">perm_identity</i></span></a>
+            <div class="col s6">
+                <div class="card-panel teal" style="height:500px !important;">
+                    <!-- nicolas -->
+                    <img style="width:75px; height:125px;" src="/images/tardis.png">
+                    <div class="infoVal" style="float:right; margin-top:15px;">
+                        <span style="font-size:20px;">Nicolas ORLANDINI<br>
+                        24 Avenue Saint Barthélémy - 06100 Nice<br>
+                        <i class="small material-icons iconPhone" style="top:15px;">phone</i>Shit on me</span>
+                    </div>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtn" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+                    <div class="containerParentNicolas">
+                        <div id="map"></div>
+                        <div class="inner">
+                            <a href="/about.html"><span class="parent"><i class="medium material-icons customIcon">perm_identity</i></span></a>
+                        </div>
+
+                        <div class="inner">
+                            <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
+                        </div>
+
+                        <div class="inner">
+                            <a href="/contact.html"><span class="parent"><i class="medium material-icons customIcon">email</i></span></a>
+                        </div>
+                    </div>
+
+                    <button style="margin-left:30%;margin-top:15px;margin-bottom:15px;" class="btn waves-effect waves-light" type="submit" name="action">En savoir plus
+                        <i class="material-icons right">info</i>
+                    </button>
+
+                    <div class="grid" style="margin-bottom:15px;">
+                        <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
+                            <div class="one-one parent">
+                                <img class="center-align" src="/images/icons/facebook.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/nicolas-orlandini-1b3871129/?locale=fr_FR">
+                            <div class="one-two parent">
+                                <img class="center-align" src="/images/icons/linkedin.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div class="two-one parent">
+                                <img class="center-align" src="/images/icons/googleplus.png" alt="">
+                            </div>
+                        </a>
+
+                        <a href="https://twitter.com/SinguFuret" target="_blank">
+                            <div class="two-two parent">
+                                <img class="center-align" src="/images/icons/twitter.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <!-- ******* -->
+                </div>
             </div>
 
-            <div class="inner box2">
-                <a href="#"><span class="parent"><i id="location" class="medium material-icons customIcon" onclick="showCloseButton('closeBtn');">location_on</i></span></a>
-            </div>
-
-            <div class="inner box3">
-                <a href="/contact.html"><span class="parent"><i class="medium material-icons customIcon">email</i></span></a>
-            </div>
-        </div>
-
-        <div style="display: inline-block; margin:15px; margin-left: 27%;">
-            <span class="spanPhone" style="position:relative; font-size:25px; font-weight:bold; margin-left:29%;">
-                <img style="position:relative;margin-right: -20px;" class="circle avatarHome" src="images/bender.png">
-                <i class="small material-icons iconPhone" style="top:15px;">phone</i><span class="telephone">06.73.17.49.70</span>
-            </span><br>
-            <span class="address" style="margin-left:45%;">31 Avenue Frédéric Mistral</span><br>
-            <span class="city" style="margin-left:50%;">06130 Grasse</span>
-        </div>
-
-        <div class="grid">
-            <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
-                <div class="one-one parent">
-                    <img class="center-align" src="/images/icons/facebook.png" alt="">
-                </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/nicolas-orlandini-1b3871129/?locale=fr_FR">
-                <div class="one-two parent">
-                    <img class="center-align" src="/images/icons/linkedin.png" alt="">
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="two-one parent">
-                    <img class="center-align" src="/images/icons/googleplus.png" alt="">
-                </div>
-            </a>
-
-            <a href="https://twitter.com/SinguFuret" target="_blank">
-                <div class="two-two parent">
-                    <img class="center-align" src="/images/icons/twitter.png" alt="">
-                </div>
-            </a>
-        </div>
     </main>
 
     <footer class="page-footer">
@@ -179,7 +195,7 @@
                     <h5 class="white-text">CV Cerm</h5>
                     <p class="grey-text text-lighten-4">Application CV Progressive Web App.</p>
                 </div>
-                <div class="col l4 offset-l2 s12">
+                <!--<div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Liens</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
@@ -189,7 +205,7 @@
                         <li><a class="grey-text text-lighten-3" href="skill.html">Compétences</a></li>
                         <li><a class="grey-text text-lighten-3" href="creation.html">Réalisations</a></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="footer-copyright">
@@ -209,9 +225,47 @@
     <script src="scripts/navigationDrawer.js"></script>
     <script src="scripts/customCardView.js"></script>
     <script type="text/javascript" src="scripts/geolocalisation.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async
+        defer></script>
     <script src="scripts/alertify.js"></script>
 
 </body>
 
 </html>
+
+
+<!--<div class="col s12 m7" style="margin-top:100px;">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img style="width:100px; height:150px;" src="/images/scott.png">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>Valentin</p>
+                            <p>LEON</p>
+                        </div>
+                        <div class="card-action">
+                            <p><i>Bow ties are cool</i> - The Doctor</p>
+                        </div>
+                    </div>
+                    <span class="card-title activator" style="color:black;"><i class="material-icons right">more_vert</i></span>
+
+                    <div class="card-reveal" style="overflow:hidden;">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <div class="horizontal">
+                            <div class="card-image" style="float:left;">
+                                <img style="width:100px; height:150px;" src="/images/tardis.png">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>Nicolas</p>
+                                    <p>ORLANDINI</p>
+                                </div>
+                                <div class="card-action">
+                                    <p><i>The truth is out there</i> - Fox Mulder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->

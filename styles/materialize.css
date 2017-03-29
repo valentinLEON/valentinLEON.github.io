@@ -981,7 +981,8 @@
 }
 
 .teal {
-    background-color: #009688 !important;
+    /*background-color: #009688 !important;*/
+    background-color: white !important;
 }
 
 .teal-text {
@@ -3373,6 +3374,7 @@ th {
 .center,
 .center-align {
     text-align: center;
+    vertical-align: middle;
 }
 
 .left {
@@ -7234,7 +7236,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .side-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    /*background-color: rgba(0, 0, 0, 0.05);*/
+    background-color: #ffc966;
+    color:#ffffff;
 }
 
 .side-nav a.btn,
