@@ -126,9 +126,12 @@ main {
 }
 
 @media screen and (max-width: 450px) {
+    .row .col.s6 {
+        width: 100%;
+    }
     .customIcon {
-        margin-left: 33% !important;
-        margin-top: 30% !important;
+        margin-left: 36% !important;
+        margin-top: 22% !important;
     }
     .spanPhone {
         margin-left: 9% !important;
@@ -142,7 +145,6 @@ main {
         margin-left: 23% !important;
     }
     .iconPhone {
-        margin-left: 11% !important;
         font-size: 15px !important;
     }
     .address {
@@ -150,5 +152,12 @@ main {
     }
     .telephone {
         font-size: 15px !important;
+    }
+    .infoVal {
+        margin-top: 0;
+        width: 69%;
+    }
+    .grid {
+        height: 0;
     }
 }

@@ -2,6 +2,22 @@
 var hauteurCardViewValentin = $(".ercagrossitValentin").height();
 var hauteurCardViewNicolas = $(".cmcagrossitNicolas").height();
 
+var jsonV = {
+    "nom": "Valentin",
+    "logo": ""
+};
+
+var jsonValentinStringify = JSON.stringify('{}');
+var jsonNicolas = JSON.stringify();
+
+var width = $(window).width(),
+    height = $(window).height();
+$(window).on('load resize', function() {
+    if ((width <= 450) && (height >= 768)) {
+        $("span .customText").css('display', 'none');
+    }
+});
+
 //on cache les deux maps
 $("#mapValentin").hide();
 $("#mapNicolas").hide();
