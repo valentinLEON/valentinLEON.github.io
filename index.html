@@ -77,6 +77,7 @@
                         <img style="width:75px; height:125px;" src="/images/scott.png">
                         <div class="infoVal" style="float:right; margin-top:15px;">
                             <span style="font-size:20px;font-weight: bold;">Valentin LEON</span><br> 31 Avenue Frédéric Mistral - 06130 Grasse<br>
+                            <span>valentin.leon0@gmail.com</span><br>
                             <i class="x-small material-icons iconPhone" style="top:15px;">phone</i>06.73.17.49.70
                         </div>
                     </div>
@@ -84,7 +85,7 @@
                     <div class="containerParentValentin">
                         <div id="mapValentin"></div>
                         <div class="innerValentin box1">
-                            <a id="about" href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
+                            <a id="about" href="/about.html/?nom=valentin"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
                         </div>
 
                         <div class="innerValentin box2">
@@ -96,7 +97,7 @@
                         </div>
                     </div>
 
-                    <button class="btn waves-effect waves-light moreInformation" type="submit" name="action"><span class="customText">En savoir plus</span>
+                    <button id="moreInfoValentin" class="btn waves-effect waves-light moreInformation valentin" type="submit" name="action"><span class="customText">En savoir plus</span>
                         <i class="material-icons right">info</i>
                     </button>
 
@@ -134,13 +135,14 @@
                     <img style="width:75px; height:125px;" src="/images/tardis.png">
                     <div class="infoVal" style="float:right; margin-top:15px;">
                         <span style="font-size:20px;font-weight: bold;">Nicolas ORLANDINI</span><br> 24 Avenue Saint Barthélémy - 06100 Nice<br>
+                        <span>nicolas.orlandini@outlook.fr</span><br>
                         <i class="x-small material-icons iconPhone" style="top:15px;">phone</i>06.20.70.30.04
                     </div>
                     <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnNicolas" onclick="hideCloseButton('closeBtnNicolas');" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
                     <div class="containerParentNicolas">
                         <div id="mapNicolas"></div>
                         <div class="innerNicolas box1">
-                            <a id="about" href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
+                            <a id="about" href="/about.html/?nom=nicolas"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
                         </div>
 
                         <div class="innerNicolas box2">
@@ -152,7 +154,7 @@
                         </div>
                     </div>
 
-                    <button class="btn waves-effect waves-light moreInformation" type="submit" name="action"><span class="customText">En savoir plus</span>
+                    <button id="moreInfoNicolas" onclick="displayAbout($)" class="btn waves-effect waves-light moreInformation nicolas" type="submit" name="action"><span class="customText">En savoir plus</span>
                         <i class="material-icons right">info</i>
                     </button>
 
@@ -194,17 +196,6 @@
                     <h5 class="white-text">CV Cerm</h5>
                     <p class="grey-text text-lighten-4">Application CV Progressive Web App.</p>
                 </div>
-                <!--<div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Liens</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
-                        <li><a class="grey-text text-lighten-3" href="about.html">A propos de moi</a></li>
-                        <li><a class="grey-text text-lighten-3" href="experience.html">Expériences professionnelles</a></li>
-                        <li><a class="grey-text text-lighten-3" href="schooling.html">Formations</a></li>
-                        <li><a class="grey-text text-lighten-3" href="skill.html">Compétences</a></li>
-                        <li><a class="grey-text text-lighten-3" href="creation.html">Réalisations</a></li>
-                    </ul>
-                </div>-->
             </div>
         </div>
         <div class="footer-copyright">
@@ -217,7 +208,6 @@
     <!-- Uncomment the line below when ready to test with fake data -->
     <!--<script src="scripts/app.js" async></script>-->
     <script type="text/javascript" src="/scripts/sWorker.js"></script>
-    <!--<script src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="scripts/home.js"></script>
     <script src="scripts/materialize.min.js"></script>
@@ -227,43 +217,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async defer></script>
     <script src="scripts/alertify.js"></script>
 
+    <script type="text/javascript">
+        function displayAbout($) {
+            var nodeParent = $(event.target).parent();
+            if (nodeParent.hasClass("valentin")) sessionStorage.setItem("nom", "valentin");
+            else if (nodeParent.hasClass("nicolas")) sessionStorage.setItem("nom", "nicolas");
+        }
+    </script>
+
 </body>
 
 </html>
-
-
-<!--<div class="col s12 m7" style="margin-top:100px;">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img style="width:100px; height:150px;" src="/images/scott.png">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>Valentin</p>
-                            <p>LEON</p>
-                        </div>
-                        <div class="card-action">
-                            <p><i>Bow ties are cool</i> - The Doctor</p>
-                        </div>
-                    </div>
-                    <span class="card-title activator" style="color:black;"><i class="material-icons right">more_vert</i></span>
-
-                    <div class="card-reveal" style="overflow:hidden;">
-                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                        <div class="horizontal">
-                            <div class="card-image" style="float:left;">
-                                <img style="width:100px; height:150px;" src="/images/tardis.png">
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <p>Nicolas</p>
-                                    <p>ORLANDINI</p>
-                                </div>
-                                <div class="card-action">
-                                    <p><i>The truth is out there</i> - Fox Mulder</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
