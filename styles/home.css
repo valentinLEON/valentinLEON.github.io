@@ -125,9 +125,20 @@ main {
     font-size: 15px !important;
 }
 
+.moreInformation {
+    left: 30%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    z-index: 0;
+}
+
 @media screen and (max-width: 450px) {
     .row .col.s6 {
         width: 100%;
+    }
+    .moreInformation {
+        left: 20%;
+        z-index: 0;
     }
     .customIcon {
         margin-left: 36% !important;
