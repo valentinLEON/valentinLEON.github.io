@@ -59,7 +59,6 @@ $("#about").click(function() {
 
 function displayAbout($) {
     var nodeParent = $(event.target).parent();
-    if (nodeParent.hasClass("valentin")) {
-        sessionStorage.setItem("nom", "valentin");
-    } else if (nodeParent.hasClass("nicolas")) sessionStorage.setItem("nom", "nicolas");
+    if (nodeParent.hasClass("valentin")) sessionStorage.setItem("nom", "valentin");
+    else if (nodeParent.hasClass("nicolas")) sessionStorage.setItem("nom", "nicolas");
 }

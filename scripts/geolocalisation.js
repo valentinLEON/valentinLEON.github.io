@@ -1,37 +1,50 @@
 function initMap() {
     var mapValentin = new google.maps.Map(document.getElementById('mapValentin'), {
         center: {
-            lat: 43.616757,
-            lng: 7.0689172
+            lat: 43.648152,
+            lng: 6.919765
         },
         zoom: 16,
     });
     var mapNicolas = new google.maps.Map(document.getElementById('mapNicolas'), {
         center: {
-            lat: 43.616757,
-            lng: 7.0689172
+            lat: 43.718399,
+            lng: 7.256210
         },
         zoom: 16,
     });
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: mapValentin,
-                title: 'you are here!'
-            });
+                if (sessionStorage.nom == "valentin") {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: mapValentin.center,
+                        title: 'Valentin LEON'
+                    });
+                } else if (sessionStorage.nom == "nicolas") {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: mapNicolas.center,
+                        title: 'Nicolas ORLANDINI'
+                    });
+                }
 
-            // infoWindow.setPosition(pos);
-            marker.setMap(mapValentin);
-            mapValentin.setCenter(pos);
-        }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-        });
+                // infoWindow.setPosition(pos);
+                marker.setMap(mapValentin);
+                mapValentin.setCenter(pos);
+            },
+            function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
     } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());

@@ -28,7 +28,7 @@ if (sessionStorage.nom != null) {
         $("#avatar").attr("src", jsonparsed.logo);
         $("#description").append(jsonparsed.description);
         $("#githubLink").attr("href", "http://github.com/valentinLEON").append(jsonparsed.nom);
-    } else {
+    } else if (sessionStorage.nom == "nicolas") {
         var jsonparsed = $.parseJSON(jsonNicolas);
         $("#avatar").attr("src", jsonparsed.logo);
         $("#description").append(jsonparsed.description);
