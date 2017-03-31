@@ -2,20 +2,6 @@
 var hauteurCardViewValentin = $(".ercagrossitValentin").height();
 var hauteurCardViewNicolas = $(".cmcagrossitNicolas").height();
 
-var jsonV = {
-    "nom": "Valentin LEON",
-    "logo": "../images/scott.png",
-    "description": "Nous sommes deux jeunes développeurs, désirant parfaire nos compétences dans le domaine." +
-        "Nous suivons un cursus informatique à l 'IUT de Nice Sophia-Antipolis en licence professionnelle Développement d'" +
-        "Applications Mobile" +
-        "Ce CV représente pour nous deux," +
-        "nos compétences ainsi que nos expériences professionnelles dans le milieu du développement." +
-        "Afin d 'avoir de plus amples renseignements sur nos projets, vous pouvez visiter nos deux liens github que vous pouvez retrouver ci-dessous."
-};
-
-var jsonValentinStringify = JSON.stringify('{}');
-var jsonNicolas = JSON.stringify();
-
 var width = $(window).width(),
     height = $(window).height();
 $(window).on('load resize', function() {

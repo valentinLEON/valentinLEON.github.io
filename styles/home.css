@@ -132,6 +132,10 @@ main {
     z-index: 0;
 }
 
+.grid {
+    height: 0;
+}
+
 @media screen and (max-width: 450px) {
     .row .col.s6 {
         width: 100%;
@@ -167,8 +171,5 @@ main {
     .infoVal {
         margin-top: 0;
         width: 69%;
-    }
-    .grid {
-        height: 0;
     }
 }
