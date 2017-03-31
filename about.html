@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="/styles/inline.css">
     <link rel="stylesheet" type="text/css" href="/styles/app.css">
+    <link rel="stylesheet" type="text/css" href="styles/timeline.css">
     <!-- CSS de materialize -->
     <link rel="stylesheet" type="text/css" href="/styles/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -75,22 +76,113 @@
         <div class="container">
             <h4 style="text-align:center; font-family:'bttf';">Développeur Applications Mobiles</h4>
             <img id="avatar" class="scott" style="width:175px;height:250px;margin-left:40%;" src="" alt="avatar">
-            <div class="row custom">
-                <div class="card orange darken-1" style="margin-bottom:35px; background-color:#607d8b !important;">
-                    <div class="card-content white-text">
-                        <span class="card-title"><i>Présentation</i></span>
-                        <p id="description"></p>
+            <div class="card">
+                <!--<div class="card-content">
+                    <p>ER > CM</p>
+                </div>-->
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#test4">Description</a></li>
+                        <li class="tab"><a href="#test5">Expériences Professionnelles</a></li>
+                        <li class="tab"><a href="#test6">Formation</a></li>
+                    </ul>
+                </div>
+                <div class="card-content white lighten-4">
+                    <div id="test4">
+                        <div id="test-swipe-1" class="col s12">
+                            <div class="card orange darken-1" style="margin-bottom:35px; background-color:#607d8b !important;">
+                                <div class="card-content white-text">
+                                    <span class="card-title"><i>Présentation</i></span>
+                                    <p id="description"></p>
+                                </div>
+                                <div style="border-top:3px #455a64 black !important;" class="card-action">
+                                    <span class="githubLink" style="float:right;">
+                                <a id="githubLink" class="customAction" href="" target="_blank"></a>
+                            </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="border-top:3px #455a64 black !important;" class="card-action">
-                        <span class="githubLink" style="float:right;">
-                            <a id="githubLink" class="customAction" href="" target="_blank"></a>
-                            <!--<a class="customAction" href="https://github.com/valentinLEON">Valentin LEON</a>
-                            <a class="customAction" href="https://github.com/nicolasOrlandini">Nicolas ORLANDINI</a>-->
-                        </span>
+                    <div id="test5">
+                        <div class="card cardTemplate skill grey lighten-5">
+                            <div class="card-content white-text cyan darken-1">
+                                <div class="name card-title">Apprenti développeur .NET</div>
+                            </div>
+                            <div class="card-content grey lighten-5">
+                                <i class="fa fa-5x" aria-hidden="true"></i>
+                                <div class="description">
+                                    InnovationCRM
+                                </div>
+                                <hr>
+                                <div class="period">En cours.</div>
+                            </div>
+                        </div>
+                        <div class="card cardTemplate skill grey lighten-5">
+                            <div class="card-content white-text deep-orange darken-1">
+                                <div class="name card-title">Stage développeur web</div>
+                            </div>
+                            <div class="card-content grey lighten-5">
+                                <i class="fa fa-5x" aria-hidden="true"></i>
+                                <div class="description">
+                                    Aigle Communication
+                                </div>
+                                <hr>
+                                <div class="period">Déc. 2015 - Juin 2016</div>
+                            </div>
+                        </div>
+                        <div class="card cardTemplate skill grey lighten-5">
+                            <div class="card-content white-text purple darken-1">
+                                <div class="name card-title">Apprenti développeur .NET</div>
+                            </div>
+                            <div class="card-content grey lighten-5">
+                                <i class="fa fa-5x" aria-hidden="true"></i>
+                                <div class="description">
+                                    Exolink
+                                </div>
+                                <hr>
+                                <div class="period">Avril 2015 - Nov. 2016</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="test6">
+                        <div class="timeline">
+                            <div class="timeline-event">
+                                <div class="card timeline-content">
+                                    <div style="z-index: 0;" class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="/images/iut.png">
+                                    </div>
+                                    <div class="card-content">
+                                        <p>IUT Nice Sophia-Antipolis</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-badge orange white-text"><span class="timelineDate">2017  2016</span></div>
+                            </div>
+                            <div class="timeline-event">
+                                <div class="card timeline-content">
+                                    <div style="z-index: 0;" class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="/images/ufip.png">
+                                    </div>
+                                    <div class="card-content">
+                                        <p>UFIP - <i>Nice</i></p>
+                                    </div>
+                                </div>
+                                <div class="timeline-badge red white-text"><span class="timelineDate">2016  2014</span></div>
+                            </div>
+                            <div class="timeline-event">
+                                <div class="card timeline-content">
+                                    <div style="z-index: 0;" class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="/images/valrose.jpg">
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Université Valrose - <i>Nice Sophia-Antipolis</i></p>
+                                    </div>
+                                </div>
+                                <div class="timeline-badge blue white-text"><span class="timelineDate">2014  2011</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer class="page-footer">

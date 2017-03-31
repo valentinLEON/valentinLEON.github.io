@@ -88,7 +88,8 @@ a.customAction:hover {
     color: #ff7b00 !important;
 }
 
-div .card.cardTemplate::before {
+
+/*div .card.cardTemplate::before {
     display: block;
     content: "";
     width: 2px;
@@ -97,9 +98,10 @@ div .card.cardTemplate::before {
     background: #d2d2d2;
     left: calc(50% - 1px);
     top: 0;
-}
+}*/
 
-div .card.cardTemplate::after {
+
+/*div .card.cardTemplate::after {
     display: block;
     content: "";
     width: 2px;
@@ -108,7 +110,7 @@ div .card.cardTemplate::after {
     background: #d2d2d2;
     left: calc(50% - 1px);
     top: calc(50% + 35px);
-}
+}*/
 
 @media screen and (max-width: 450px) {
     .scott {
