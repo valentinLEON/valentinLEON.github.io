@@ -76,16 +76,18 @@
                     <div class="introduction">
                         <img style="width:75px; height:125px;" src="/images/scott.png">
                         <div class="infoVal" style="float:right; margin-top:15px;">
-                            <span style="font-size:20px;font-weight: bold;">Valentin LEON</span><br> 31 Avenue Frédéric Mistral - 06130 Grasse<br>
+                            <span style="font-size:20px;font-weight: bold;">Valentin LEON</span><br> 31 Avenue Frédéric Mistral
+                            - 06130 Grasse<br>
                             <span>valentin.leon0@gmail.com</span><br>
                             <i class="x-small material-icons iconPhone" style="top:15px;">phone</i>06.73.17.49.70
                         </div>
                     </div>
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnValentin" onclick="hideCloseButton('closeBtnValentin');" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnValentin" onclick="hideCloseButton('closeBtnValentin');"
+                        style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
                     <div class="containerParentValentin">
                         <div id="mapValentin"></div>
                         <div class="innerValentin box1">
-                            <a id="about" href="/about.html/?nom=valentin"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
+                            <a id="about" href="/about.html"><span class="parent"><i class="small material-icons customIcon">perm_identity</i></span></a>
                         </div>
 
                         <div class="innerValentin box2">
@@ -97,10 +99,12 @@
                         </div>
                     </div>
 
-                    <button id="moreInfoValentin" class="btn waves-effect waves-light moreInformation valentin" type="submit" name="action"><span class="customText">En savoir plus</span>
+                    <a href="/about.html/">
+                        <button id="moreInfoValentin" onclick="displayAbout($);" class="btn waves-effect waves-light moreInformation valentin" type="submit"
+                            name="action"><span class="customText">En savoir plus</span>
                         <i class="material-icons right">info</i>
-                    </button>
-
+                        </button>
+                    </a>
                     <div class="grid" style="margin-bottom:15px;">
                         <a href="https://www.facebook.com/val.leon.10" target="_blank">
                             <div class="one-one parent">
@@ -134,11 +138,13 @@
                     <!-- nicolas -->
                     <img style="width:75px; height:125px;" src="/images/tardis.png">
                     <div class="infoVal" style="float:right; margin-top:15px;">
-                        <span style="font-size:20px;font-weight: bold;">Nicolas ORLANDINI</span><br> 24 Avenue Saint Barthélémy - 06100 Nice<br>
+                        <span style="font-size:20px;font-weight: bold;">Nicolas ORLANDINI</span><br> 24 Avenue Saint Barthélémy
+                        - 06100 Nice<br>
                         <span>nicolas.orlandini@outlook.fr</span><br>
                         <i class="x-small material-icons iconPhone" style="top:15px;">phone</i>06.20.70.30.04
                     </div>
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnNicolas" onclick="hideCloseButton('closeBtnNicolas');" style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="closeBtnNicolas" onclick="hideCloseButton('closeBtnNicolas');"
+                        style="position: absolute; margin-left: 5px; margin-top: 5px; display: none; float: right;"><i class="material-icons">close</i></a>
                     <div class="containerParentNicolas">
                         <div id="mapNicolas"></div>
                         <div class="innerNicolas box1">
@@ -154,9 +160,12 @@
                         </div>
                     </div>
 
-                    <button id="moreInfoNicolas" onclick="displayAbout($)" class="btn waves-effect waves-light moreInformation nicolas" type="submit" name="action"><span class="customText">En savoir plus</span>
+                    <a href="/about.html/">
+                        <button id="moreInfoNicolas" onclick="displayAbout($)" class="btn waves-effect waves-light moreInformation nicolas" type="submit"
+                            name="action"><span class="customText">En savoir plus</span>
                         <i class="material-icons right">info</i>
-                    </button>
+                        
+                    </button></a>
 
                     <div class="grid" style="margin-bottom:15px;">
                         <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
@@ -214,13 +223,16 @@
     <script src="scripts/navigationDrawer.js"></script>
     <script src="scripts/customCardView.js"></script>
     <script type="text/javascript" src="scripts/geolocalisation.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aB5q3tZJQ6_fy1SxXHOEi2tXd6pKdb8&callback=initMap" async
+        defer></script>
     <script src="scripts/alertify.js"></script>
 
     <script type="text/javascript">
         function displayAbout($) {
             var nodeParent = $(event.target).parent();
-            if (nodeParent.hasClass("valentin")) sessionStorage.setItem("nom", "valentin");
+            if (nodeParent.hasClass("valentin")) {
+                sessionStorage.setItem("nom", "valentin");
+            }
             else if (nodeParent.hasClass("nicolas")) sessionStorage.setItem("nom", "nicolas");
         }
     </script>
