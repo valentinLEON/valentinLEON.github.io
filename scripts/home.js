@@ -48,17 +48,13 @@ $("#closeBtnNicolas").click(function() {
     $(".cmcagrossitNicolas").height(hauteurCardViewValentin);
 });
 
-$("#about").click(function() {
-    var divClassInner = $(this).parent().find("div[class^='inner']");
-    if (divClassInner.find("[class~='Valentin'")) {
-        localStorage.setItem('valentin', true);
-    } else if (divClassInner.find("[class~='Nicolas'")) {
-        localStorage.setItem('nicolas', true);
-    }
-});
-
 function displayAbout($) {
     var nodeParent = $(event.target).parent();
-    if (nodeParent.hasClass("valentin")) sessionStorage.setItem("nom", "valentin");
-    else if (nodeParent.hasClass("nicolas")) sessionStorage.setItem("nom", "nicolas");
+    if (nodeParent.hasClass("valentin")) {
+        localStorage.clear();
+        localStorage.setItem("nom", "valentin");
+    } else if (nodeParent.hasClass("nicolas")) {
+        localStorage.clear();
+        localStorage.setItem("nom", "nicolas");
+    }
 }

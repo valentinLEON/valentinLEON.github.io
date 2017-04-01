@@ -76,21 +76,21 @@
         //var statement = 'select * from cv.project where woeid=' + key;
         //var url = 'put a url' + statement;
         // Fetch the latest data.
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function() {
-            if (request.readyState === XMLHttpRequest.DONE) {
-                if (request.status === 200) {
-                    var response = JSON.parse(request.response);
-                    var results = response.query.results;
-                    results.key = key;
-                    results.label = label;
-                    results.created = response.query.created;
-                    app.updateExpCard(results);
-                }
-            } else {
-                app.updateExpCard(updateExperiences);
-            }
-        };
+        // var request = new XMLHttpRequest();
+        // request.onreadystatechange = function() {
+        //     if (request.readyState === XMLHttpRequest.DONE) {
+        //         if (request.status === 200) {
+        //             var response = JSON.parse(request.response);
+        //             var results = response.query.results;
+        //             results.key = key;
+        //             results.label = label;
+        //             results.created = response.query.created;
+        //             app.updateExpCard(results);
+        //         }
+        //     } else {
+        //         app.updateExpCard(updateExperiences);
+        //     }
+        // };
         request.open('GET', url);
         request.send();
     };

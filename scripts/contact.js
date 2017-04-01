@@ -1,5 +1,7 @@
+$('select').material_select();
+
 $("#btnSend").click(function() {
-            window.open('mailto:valentin.leon0@gmail.com?subject=' + document.getElementById("subject").value + '&body=' + document.getElementById("message").value + '');
+    window.open('mailto:valentin.leon0@gmail.com?subject=' + document.getElementById("subject").value + '&body=' + document.getElementById("message").value + '');
 });
 
 // Envoi de mail avec Ajax

@@ -26,6 +26,10 @@ function initMap() {
                         map: mapValentin.center,
                         title: 'Valentin LEON'
                     });
+
+                    // infoWindow.setPosition(pos);
+                    marker.setMap(mapValentin);
+                    mapValentin.setCenter(pos);
                 } else if (sessionStorage.nom == "nicolas") {
                     var pos = {
                         lat: position.coords.latitude,
@@ -36,11 +40,11 @@ function initMap() {
                         map: mapNicolas.center,
                         title: 'Nicolas ORLANDINI'
                     });
-                }
 
-                // infoWindow.setPosition(pos);
-                marker.setMap(mapValentin);
-                mapValentin.setCenter(pos);
+                    // infoWindow.setPosition(pos);
+                    marker.setMap(mapNicolas);
+                    mapValentin.setCenter(pos);
+                }
             },
             function() {
                 handleLocationError(true, infoWindow, map.getCenter());

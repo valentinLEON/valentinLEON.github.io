@@ -2,7 +2,7 @@
  * Attention à la version de l'application
  */
 // nom du cache
-var cacheName = 'cerm v1.0.7';
+var cacheName = 'cerm v1.0.10';
 // fichiers à mettre en cache
 var filesToCache = [
     '/',
@@ -10,8 +10,6 @@ var filesToCache = [
     '/about.html',
     '/contact.html',
     '/creation.html',
-    '/experience.html',
-    '/schooling.html',
     '/skill.html',
     '/styles/inline.css',
     '/styles/app.css',
@@ -26,6 +24,7 @@ var filesToCache = [
     '/scripts/contact.js',
     '/scripts/alertify.js',
     '/scripts/geolocalisation.js',
+    '/scripts/about.js',
     '/fonts/BTTF.ttf',
     '/images/scott.png',
     '/images/tardis.png',
