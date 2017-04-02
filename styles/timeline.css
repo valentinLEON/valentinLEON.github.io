@@ -75,6 +75,11 @@ span.timelineDate {
     top: 6px;
 }
 
+span.customCardTitle {
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
 @media (max-width: 450px) {
     .timeline .timeline-event .timeline-content {
         width: 85% !important;
