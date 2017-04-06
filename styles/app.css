@@ -114,9 +114,16 @@ a.customAction:hover {
 
 @media screen and (max-width: 450px) {
     .scott {
-        margin-left: 25% !important;
+        margin-left: 14% !important;
     }
     .githubLink {
         font-size: 12px;
+    }
+    .card {
+        margin-top: 30px !important;
+        margin-left: 0 !important; margin-right: 0 !important;
+    }
+    .card .card-content {
+        padding: 0 !important;
     }
 }

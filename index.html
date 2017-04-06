@@ -74,7 +74,7 @@
                 <div class="card-panel teal ercagrossitValentin" style="height:510px;">
                     <!-- card view valentin -->
                     <div class="introduction">
-                        <img style="width:75px; height:125px;" src="/images/scott.png">
+                        <img style="width:125px; height:125px;" src="/images/scott.png">
                         <div class="infoVal" style="float:right; margin-top:15px;">
                             <span style="font-size:20px;font-weight: bold;">Valentin LEON</span><br> 31 Avenue Frédéric Mistral - 06130 Grasse<br>
                             <span>valentin.leon0@gmail.com</span><br>
@@ -98,7 +98,7 @@
                     </div>
 
                     <a href="/about.html">
-                        <button id="moreInfoValentin" onclick="displayAbout($);" class="btn waves-effect waves-light moreInformation valentin" type="submit" name="action"><span class="customText">En savoir plus</span>
+                        <button id="moreInfoValentin" onclick="displayAbout();" class="btn waves-effect waves-light moreInformation valentin" type="submit" name="action"><span class="customText">En savoir plus</span>
                         <i class="material-icons right">info</i>
                         </button>
                     </a>
@@ -133,7 +133,7 @@
             <div class="col s6">
                 <div class="card-panel teal cmcagrossitNicolas" style="height:510px;">
                     <!-- nicolas -->
-                    <img style="width:75px; height:125px;" src="/images/tardis.png">
+                    <img style="width:125px; height:125px;" src="/images/tardis.png">
                     <div class="infoVal" style="float:right; margin-top:15px;">
                         <span style="font-size:20px;font-weight: bold;">Nicolas ORLANDINI</span><br> 24 Avenue Saint Barthélémy - 06100 Nice<br>
                         <span>nicolas.orlandini@outlook.fr</span><br>
@@ -156,10 +156,10 @@
                     </div>
 
                     <a href="/about.html">
-                        <button id="moreInfoNicolas" onclick="displayAbout($)" class="btn waves-effect waves-light moreInformation nicolas" type="submit" name="action"><span class="customText">En savoir plus</span>
-                        <i class="material-icons right">info</i>
-                        
-                    </button></a>
+                        <button id="moreInfoNicolas" onclick="displayAbout()" class="btn waves-effect waves-light moreInformation nicolas" type="submit" name="action"><span class="customText">En savoir plus</span>
+                            <i class="material-icons right">info</i>
+                        </button>
+                    </a>
 
                     <div class="grid" style="margin-bottom:15px;">
                         <a href="https://www.facebook.com/profile.php?id=100013942627955" target="_blank">
@@ -211,6 +211,9 @@
     <!-- Uncomment the line below when ready to test with fake data -->
     <!--<script src="scripts/app.js" async></script>-->
     <script type="text/javascript" src="/scripts/sWorker.js"></script>
+    <!--<script type="text/javascript">
+        localStorage.clear();
+    </script>-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="scripts/home.js"></script>
     <script src="scripts/materialize.min.js"></script>

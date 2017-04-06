@@ -4,7 +4,7 @@ var hauteurCardViewNicolas = $(".cmcagrossitNicolas").height();
 
 var width = $(window).width(),
     height = $(window).height();
-$(window).on('load resize', function() {
+$(window).on('load resize', function () {
     if ((width <= 450) && (height >= 768)) {
         $("span .customText").css('display', 'none');
     }
@@ -15,7 +15,7 @@ $("#mapValentin").hide();
 $("#mapNicolas").hide();
 
 //afficher la map pour valentin
-$("#locationValentin").click(function() {
+$("#locationValentin").click(function () {
     $(".innerValentin").hide();
     $("#mapValentin").show();
     $(".containerParentValentin").height(300); // taille de la map
@@ -24,7 +24,7 @@ $("#locationValentin").click(function() {
     $(".ercagrossitValentin").height(hauteurCardView + hauteurContainer);
 });
 //afficher la map pour nicolas
-$("#locationNicolas").click(function() {
+$("#locationNicolas").click(function () {
     $(".innerNicolas").hide();
     $("#mapNicolas").show();
     $(".containerParentNicolas").height(300); // taille de la map
@@ -34,27 +34,26 @@ $("#locationNicolas").click(function() {
 });
 
 //fermer la map pour valentin
-$("#closeBtnValentin").click(function() {
+$("#closeBtnValentin").click(function () {
     $(".innerValentin").show();
     $("#closeBtnValentin").hide();
     $(".containerParentValentin").height(75);
     $(".ercagrossitValentin").height(hauteurCardViewValentin);
 });
 //fermer la map pour nicolas
-$("#closeBtnNicolas").click(function() {
+$("#closeBtnNicolas").click(function () {
     $(".innerNicolas").show();
     $("#closeBtnNicolas").hide();
     $(".containerParentNicolas").height(75);
     $(".cmcagrossitNicolas").height(hauteurCardViewValentin);
 });
 
-function displayAbout($) {
-    var nodeParent = $(event.target).parent();
+function displayAbout() {
+    localStorage.removeItem("nom");
+    var nodeParent = $(event.target).closest('button');
     if (nodeParent.hasClass("valentin")) {
-        localStorage.clear();
         localStorage.setItem("nom", "valentin");
     } else if (nodeParent.hasClass("nicolas")) {
-        localStorage.clear();
         localStorage.setItem("nom", "nicolas");
     }
 }
