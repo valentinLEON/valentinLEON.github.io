@@ -23,6 +23,9 @@
     left: calc(50% - 1px);
     top: 0;
 }
+.timeline .timeline-event.no-before::before{
+    display:none;
+}
 
 .timeline .timeline-event::after {
     display: block;
@@ -78,6 +81,11 @@ span.timelineDate {
 span.customCardTitle {
     font-size: 15px !important;
     font-weight: bold !important;
+}
+
+.imageTimeline {
+    width: 100%;
+    height: 200px;
 }
 
 @media (max-width: 450px) {

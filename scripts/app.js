@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     var app = {
@@ -9,7 +9,7 @@
         cardTemplate: document.querySelector('.cardTemplate'),
         timelineTemplate: document.querySelector('.timelineTemplate'),
         container: document.querySelector('.mainCard'),
-        containerTimeline: document.querySelector('.mainTimeline'),
+        containerTimeline: document.querySelector('.mainTimeline .timeline'),
         addDialog: document.querySelector('.dialog-container')
     };
 
@@ -18,7 +18,7 @@
      * Methods to update/refresh the UI
      *
      ****************************************************************************/
-    app.updateExpCard = function (data) {
+    app.updateExpCard = function(data) {
         var dataLastUpdated = new Date(data.created);
         var code = data.code
         var description = data.description;
@@ -45,34 +45,35 @@
             app.isLoading = false;
         }
     };
-    app.updateSchoolCard = function (data) {
-        console.log(data);
+    app.updateSchoolCard = function(data) {
         var dataLastUpdated = new Date(data.created);
         var customCardTitle = data.customCardTitle;
         var timelineDate = data.timelineDate;
         var name = data.name;
         var url = data.url;
+        var color = data.color;
         var card = app.visibleTimelineCards[data.key];
         if (!card) {
-            card = app.cardTemplate.cloneNode(true);
+            card = app.timelineTemplate.cloneNode(true);
             card.classList.remove('timelineTemplate');
             card.querySelector('.imageTimeline').setAttribute('src', url);
-            // $("img .imageTimeline").attr("src", url);
-            // $("p .card-timeline-name").append(name);
-            //card.querySelector('card-timeline-title').textContent = name;
+            card.querySelector('.customCardTitle').textContent = customCardTitle;
+            card.querySelector('.card-timeline-name').textContent = name;
+            if (data.numero != 1) {
+                card.classList.remove('firstCardview');
+                card.classList.remove('no-before'); //on supprime la première barre de la timeline
+            }
             card.removeAttribute('hidden');
             app.containerTimeline.appendChild(card);
             app.visibleTimelineCards[data.key] = card;
         }
-        //$(".card-timeline-name").append(customCardTitle);
-        //$("span .timeLineDate").append(timelineDate);
-        // card.querySelector('.card-timeline-name').textContent = customCardTitle;
-        // card.querySelector('.timelineDate').textContent = timelineDate;
+        card.querySelector('.timelineDate').textContent = timelineDate;
+        card.querySelector('.myBubble').className += " " + color;
         // pour ajouter une icône
         //card.querySelector('.fa').classList.add(app.getIconClass(code));
         if (app.isLoading) {
             app.spinner.setAttribute('hidden', true);
-            app.container.removeAttribute('hidden');
+            app.containerTimeline.removeAttribute('hidden');
             app.isLoading = false;
         }
     };
@@ -81,12 +82,12 @@
      * Methods for dealing with the model
      *
      ****************************************************************************/
-    app.getProject = function (key, label) {
+    app.getProject = function(key, label) {
         // var statement = 'select * from cv.project where woeid=' + key;
         // var url = 'put a url' + statement;
         //Fetch the latest data.
         var request = new XMLHttpRequest();
-        request.onreadystatechange = function () {
+        request.onreadystatechange = function() {
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === 200) {
                     var response = JSON.parse(request.response);
@@ -112,19 +113,19 @@
         request.send();
     };
     // Iterate all of the cards and attempt to get the latest forecast data
-    app.updateSkills = function () {
+    app.updateSkills = function() {
         var keys = Object.keys(app.visibleCards);
-        keys.forEach(function (key) {
+        keys.forEach(function(key) {
             app.getForecast(key);
         });
         var keysT = Object.keys(app.visibleTimelineCards);
-        keysT.forEach(function (key) {
+        keysT.forEach(function(key) {
             app.getForecast(key);
         });
     };
 
     // TODO: récupérer des icônes sympas...
-    app.getIconClass = function (expCode) {
+    app.getIconClass = function(expCode) {
         expCode = parseInt(expCode);
         switch (expCode) {
             case 1:
@@ -154,7 +155,6 @@
         period: "Déc. 2015 - Juin 2016",
         code: 1, // pour le logo
         color: "deep-orange"
-
     };
     var updateExperiencesValentin3 = {
         key: '2459117',
@@ -187,21 +187,63 @@
 
     var updateSchoolValentin1 = {
         key: '2459130',
-        name: 'IUT Nice Sophia-Antipolis',
-        url: '/images/iut.png',
-        created: '2017-02-26T18:13:00Z',
+        name: 'IUT - Nice Sophia-Antipolis',
+        url: '../images/iut.png',
+        created: '2017-02-26T19:13:00Z',
         customCardTitle: "Licence Professionnelle - Développement Application Mobile",
         timelineDate: "2017  2016",
-        color: "orange"
+        color: "orange",
+        numero: 1
     }
     var updateSchoolValentin2 = {
         key: '2459131',
-        name: 'UFIP - <i>Nice</i>',
-        url: '/images/ufip.png',
+        name: 'UFIP - Nice',
+        url: '../images/ufip.png',
         created: '2017-02-26T18:13:00Z',
         customCardTitle: "BTS - Services Informatique aux Organisations",
         timelineDate: "2016  2014",
-        color: "red"
+        color: "red",
+        numero: 2
+    }
+    var updateSchoolValentin3 = {
+        key: '2459132',
+        name: 'Université Valrose - Nice Sophia-Antipolis',
+        url: '../images/valrose.jpg',
+        created: '2017-02-26T17:13:00Z',
+        customCardTitle: "Licence 2 Math Informatique",
+        timelineDate: "2014  2011",
+        color: "blue",
+        numero: 3
+    }
+    var updateSchoolNicolas1 = {
+        key: '2459140',
+        name: 'IUT - Nice Sophia-Antipolis',
+        url: '../images/iut.png',
+        created: '2017-02-26T19:13:00Z',
+        customCardTitle: "Licence Professionnelle - Développement Application Mobile",
+        timelineDate: "2017  2016",
+        color: "orange",
+        numero: 1
+    }
+    var updateSchoolNicolas2 = {
+        key: '2459141',
+        name: 'Lycée les Eucalyptus - Nice',
+        url: '../images/euca.jpg',
+        created: '2017-02-26T18:13:00Z',
+        customCardTitle: "BTS - Systèmes Numériques, Option Informatique & Réseaux",
+        timelineDate: "2016  2014",
+        color: "red",
+        numero: 2
+    }
+    var updateSchoolNicolas3 = {
+        key: '2459142',
+        name: 'Lycée Parc Impérial - Nice',
+        url: '../images/imperial.jpg',
+        created: '2017-02-26T17:13:00Z',
+        customCardTitle: "Baccalauréat - Série S, Option ISN",
+        timelineDate: "2014  2011",
+        color: "blue",
+        numero: 3
     }
     // uncomment line below to test app with fake data
     if (localStorage.nom == "valentin") {
@@ -209,12 +251,25 @@
         app.updateExpCard(updateExperiencesValentin2);
         app.updateExpCard(updateExperiencesValentin3);
 
-        //app.updateSchoolCard(updateSchoolValentin1);
-        //app.updateSchoolCard(updateSchoolValentin2);
+        if (updateSchoolValentin1.numero == 1) {
+            $('.timeline-event').addClass('no-before'); //Remove before
+        }
+
+        app.updateSchoolCard(updateSchoolValentin1);
+        app.updateSchoolCard(updateSchoolValentin2);
+        app.updateSchoolCard(updateSchoolValentin3);
     }
     else if (localStorage.nom == "nicolas") {
         app.updateExpCard(updateExperiencesNicolas1);
         app.updateExpCard(updateExperiencesNicolas2);
+
+        if (updateSchoolNicolas1.numero == 1) {
+            $('.timeline-event').addClass('no-before'); //Remove before
+        }
+
+        app.updateSchoolCard(updateSchoolNicolas1);
+        app.updateSchoolCard(updateSchoolNicolas2);
+        app.updateSchoolCard(updateSchoolNicolas3);
     }
 
 })();

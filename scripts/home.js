@@ -48,6 +48,7 @@ $("#closeBtnNicolas").click(function () {
     $(".cmcagrossitNicolas").height(hauteurCardViewValentin);
 });
 
+
 function displayAbout() {
     localStorage.removeItem("nom");
     var nodeParent = $(event.target).closest('button');

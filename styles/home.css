@@ -97,7 +97,7 @@ main {
 
 .customIcon {
     color: white;
-    margin-left: 43%;
+    margin-left: 47%;
 }
 
 .customPhone {
@@ -168,8 +168,17 @@ main {
     .telephone {
         font-size: 15px !important;
     }
-    .infoVal {
-        margin-top: 0;
-        width: 69%;
+    .introduction {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .ercagrossitValentin {
+        height: 600px !important;
+    }
+    .cmcagrossitNicolas {
+        height: 600px !important;
+    }
+    .containerSocialNetwork {
+        margin-top: 85px;
     }
 }

@@ -2,7 +2,7 @@
  * Attention à la version de l'application
  */
 // nom du cache
-var cacheName = 'cerm v1.0.23';
+var cacheName = 'cerm v1.0.24';
 // fichiers à mettre en cache
 var filesToCache = [
     '/',

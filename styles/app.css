@@ -88,30 +88,6 @@ a.customAction:hover {
     color: #ff7b00 !important;
 }
 
-
-/*div .card.cardTemplate::before {
-    display: block;
-    content: "";
-    width: 2px;
-    height: calc(50% - 26px);
-    position: absolute;
-    background: #d2d2d2;
-    left: calc(50% - 1px);
-    top: 0;
-}*/
-
-
-/*div .card.cardTemplate::after {
-    display: block;
-    content: "";
-    width: 2px;
-    height: calc(50% - 30px);
-    position: absolute;
-    background: #d2d2d2;
-    left: calc(50% - 1px);
-    top: calc(50% + 35px);
-}*/
-
 @media screen and (max-width: 450px) {
     .scott {
         margin-left: 14% !important;
