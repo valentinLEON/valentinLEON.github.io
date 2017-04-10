@@ -1,57 +1,41 @@
 function initMap() {
-    var mapValentin = new google.maps.Map(document.getElementById('mapValentin'), {
-        center: {
-            lat: 43.648152,
-            lng: 6.919765
-        },
-        zoom: 16,
-    });
-    var mapNicolas = new google.maps.Map(document.getElementById('mapNicolas'), {
-        center: {
-            lat: 43.718399,
-            lng: 7.256210
-        },
-        zoom: 16,
-    });
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-                if (sessionStorage.nom == "valentin") {
-                    var pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-                    var marker = new google.maps.Marker({
-                        position: pos,
-                        map: mapValentin.center,
-                        title: 'Valentin LEON'
-                    });
 
-                    // infoWindow.setPosition(pos);
-                    marker.setMap(mapValentin);
-                    mapValentin.setCenter(pos);
-                } else if (sessionStorage.nom == "nicolas") {
-                    var pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-                    var marker = new google.maps.Marker({
-                        position: pos,
-                        map: mapNicolas.center,
-                        title: 'Nicolas ORLANDINI'
-                    });
+    var mapValentin = {
+        center: new google.maps.LatLng(43.648152, 6.919765),
+        zoom: 16,
+    };
+    var mapNicolas = {
+        center: new google.maps.LatLng(43.718399, 7.256210),
+        zoom: 16,
+    };
+    var coordValentin = new google.maps.LatLng(43.648152, 6.919765);
+    marker = new google.maps.Marker({
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: coordValentin
+    });
+    marker.addListener('click', toggleBounce);
+    var map = new google.maps.Map(document.getElementById("mapValentin"), mapValentin);
 
-                    // infoWindow.setPosition(pos);
-                    marker.setMap(mapNicolas);
-                    mapValentin.setCenter(pos);
-                }
-            },
-            function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-            });
+    // var coordNicolas = new google.maps.LatLng(43.648152, 6.919765);
+    // markerNicolas = new google.maps.Marker({
+    //     map: map,
+    //     // draggable: true,
+    //     animation: google.maps.Animation.DROP,
+    //     position: coordNicolas
+    // });
+
+    // var mapNicolas = new google.maps.Map(document.getElementById('mapNicolas'), mapNicolas);
+    // markerNicolas.setMap(mapNicolas);
+
+}
+
+function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
     } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
+        marker.setAnimation(google.maps.Animation.BOUNCE);
     }
 }
 
@@ -63,14 +47,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 /* On cache le bouton de fermeture de la map */
-function hideCloseButton(id) {
-    var nom = id.substring(8);
-    console.log(nom);
-    $("#" + id).css('display', 'none');
-    $("#map" + nom).css('display', 'none');
-}
+// function hideCloseButton(id) {
+//     var nom = id.substring(8);
+//     console.log(nom);
+//     $("#" + id).css('display', 'none');
+//     $("#map" + nom).css('display', 'none');
+// }
 
 /* on affiche le bouton de fermeture de la map */
-function showCloseButton(id) {
-    document.getElementById(id).style.display = 'inline-block';
-}
+// function showCloseButton(id) {
+//     document.getElementById(id).style.display = 'inline-block';
+// }
