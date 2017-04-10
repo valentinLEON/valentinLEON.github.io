@@ -9,6 +9,7 @@ function initMap() {
         zoom: 16,
     };
     var coordValentin = new google.maps.LatLng(43.648152, 6.919765);
+    var map = new google.maps.Map(document.getElementById("mapValentin"), mapValentin);
     marker = new google.maps.Marker({
         map: map,
         draggable: true,
@@ -16,7 +17,15 @@ function initMap() {
         position: coordValentin
     });
     marker.addListener('click', toggleBounce);
-    var map = new google.maps.Map(document.getElementById("mapValentin"), mapValentin);
+    setTimeout(function() { marker.setAnimation(null); }, 750);
+
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
 
     // var coordNicolas = new google.maps.LatLng(43.648152, 6.919765);
     // markerNicolas = new google.maps.Marker({
@@ -31,14 +40,6 @@ function initMap() {
 
 }
 
-function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
-    } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-}
-
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -46,15 +47,15 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Votre navigateur ne supporte pas le service de navigation.');
 }
 
-/* On cache le bouton de fermeture de la map */
+// On cache le bouton de fermeture de la map /
 // function hideCloseButton(id) {
-//     var nom = id.substring(8);
+//     var nom = id.substring ;
 //     console.log(nom);
 //     $("#" + id).css('display', 'none');
 //     $("#map" + nom).css('display', 'none');
 // }
 
-/* on affiche le bouton de fermeture de la map */
+// on affiche le bouton de fermeture de la map /
 // function showCloseButton(id) {
 //     document.getElementById(id).style.display = 'inline-block';
 // }
