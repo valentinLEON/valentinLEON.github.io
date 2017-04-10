@@ -84,13 +84,14 @@ span.customCardTitle {
 }
 
 .imageTimeline {
-    width: 100%;
-    height: 200px;
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 450px) {
     .timeline .timeline-event .timeline-content {
-        width: 85% !important;
         height: calc(50% - 10px) !important;
     }
     .timeline .timeline-badge {

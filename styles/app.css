@@ -88,6 +88,25 @@ a.customAction:hover {
     color: #ff7b00 !important;
 }
 
+/****************************/
+/*          ABOUT           */
+/****************************/
+
+.avatar-about {
+    width:250px;
+    height:250px;
+    display: block !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.title-about {
+    text-align:center; 
+    font-family:'bttf';
+}
+
+
 @media screen and (max-width: 450px) {
     .scott {
         margin-left: 14% !important;
