@@ -102,8 +102,7 @@
                     app.updateExpCard(updateExperiencesValentin1);
                     app.updateExpCard(updateExperiencesValentin2);
                     app.updateExpCard(updateExperiencesValentin3);
-                }
-                else if (localStorage.nom == "nicolas") {
+                } else if (localStorage.nom == "nicolas") {
                     app.updateExpCard(updateExperiencesNicolas1);
                     app.updateExpCard(updateExperiencesNicolas2);
                 }
@@ -245,7 +244,7 @@
         color: "blue",
         numero: 3
     }
-    // uncomment line below to test app with fake data
+
     if (localStorage.nom == "valentin") {
         app.updateExpCard(updateExperiencesValentin1);
         app.updateExpCard(updateExperiencesValentin2);
@@ -258,8 +257,7 @@
         app.updateSchoolCard(updateSchoolValentin1);
         app.updateSchoolCard(updateSchoolValentin2);
         app.updateSchoolCard(updateSchoolValentin3);
-    }
-    else if (localStorage.nom == "nicolas") {
+    } else if (localStorage.nom == "nicolas") {
         app.updateExpCard(updateExperiencesNicolas1);
         app.updateExpCard(updateExperiencesNicolas2);
 
