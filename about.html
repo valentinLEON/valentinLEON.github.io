@@ -64,83 +64,82 @@
                 </a>
             </li>
         </ul>
-        <nav style="position: fixed; z-index:1;">
-            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-            <span class="left hide-on-med-and-down">CV</span>
-            <span class="titre left hide-on-large-only">A propos de moi</span>
-            <span href="#" class="titre center hide-on-med-and-down">A propos de moi</span>
+        <nav class="nav-extended" style="position: fixed; z-index:1;">
+            <div class="nav-wrapper">
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+                <span class="left hide-on-med-and-down">CV</span>
+                <span class="titre left hide-on-large-only">A propos de moi</span>
+                <span href="#" class="titre center hide-on-med-and-down">A propos de moi</span>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active" href="#test4">Description</a></li>
+                    <li class="tab"><a href="#test5">Expériences</a></li>
+                    <li class="tab"><a href="#test6">Formation</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="main-about">
         <div class="container">
-            <h4 class="title-about">Developpeur Applications Mobiles</h4>
-            <img id="avatar" class="avatar-about" src="" alt="avatar">
-            <div class="card">
-                <!--<div class="card-content">
-                    <p>ER > CM</p>
-                </div>-->
-                <div class="card-tabs">
-                    <ul class="tabs tabs-fixed-width">
-                        <li class="tab"><a class="active" href="#test4">Description</a></li>
-                        <li class="tab"><a href="#test5">Expériences Professionnelles</a></li>
-                        <li class="tab"><a href="#test6">Formation</a></li>
-                    </ul>
-                </div>
+            <div id="test4">
+                <h4 class="title-about">Developpeur Applications Mobiles</h4>
+                <img id="avatar" class="avatar-about" src="" alt="avatar">
                 <div class="card-content white lighten-4">
                     <!-- Description -->
-                    <div id="test4">
-                        <div id="test-swipe-1" class="col s12">
-                            <div class="card vertical blue-grey darken-1">
-                                <div class="card-content white-text">
-                                    <span class="card-title"><i>Présentation</i></span>
-                                    <p id="description"></p>
-                                </div>
-                                <div class="card-action">
-                                    <span class="githubLink" style="float:right;">
+
+                    <div id="test-swipe-1" class="col s12">
+                        <div class="card vertical blue-grey darken-1">
+                            <div class="card-content white-text">
+                                <span class="card-title"><i>Présentation</i></span>
+                                <p id="description"></p>
+                            </div>
+                            <div class="card-action">
+                                <span class="githubLink" style="float:right;">
                                         <a id="githubLink" class="customAction" href="" target="_blank"></a>
                                     </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Expériences Professionnelles -->
-                    <div id="test5" class="mainCard">
-                        <div id="cardviewExp" class="card cardTemplate skill grey lighten-5" hidden>
-                            <div class="name-key" hidden></div>
-                            <div class="card-last-updated" hidden></div>
-                            <div class="myCard card-content white-text darken-1">
-                                <div class="name card-title"></div>
-                            </div>
-                            <i class="fa fa-5x" aria-hidden="true"></i>
-                            <div style="margin-top:25px !important;" class="description"></div>
-                            <hr>
-                            <div class="period"></div>
-                        </div>
-                    </div>
-                    <!-- Formation -->
-                    <div id="test6" class="mainTimeline">
-                        <div class="timeline">
-                            <div id="firstCardview" class="timeline-event firstCardview timelineTemplate" hidden>
-                                <div class="name-timeline-key" hidden></div>
-                                <div class="card-timeline-last-updated" hidden></div>
-                                <div class="card timeline-content">
-                                    <div style="z-index: 0;" class="card-timeline-image waves-effect waves-block waves-light">
-                                        <img class="activator imageTimeline" src="" alt="logo">
-                                    </div>
-                                    <div class="card-content">
-                                        <span class="title card-timeline-title activator grey-text text-darken-4 customCardTitle"></span>
-                                        <p class="card-timeline-name"></p>
-                                    </div>
-                                </div>
-                                <div class="myBubble timeline-badge white-text">
-                                    <span class="timelineDate"></span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Expériences Professionnelles -->
+            <div id="test5" class="mainCard">
+                <div id="cardviewExp" class="card cardTemplate skill grey lighten-5" hidden>
+                    <div class="name-key" hidden></div>
+                    <div class="card-last-updated" hidden></div>
+                    <div class="myCard card-content white-text darken-1">
+                        <span class="name card-title title-card"></span>
+                    </div>
+                    <i class="fa fa-5x" aria-hidden="true"></i>
+                    <div style="margin-top:20px !important;" class="description"></div>
+                    <hr>
+                    <div class="period"></div>
+                </div>
+            </div>
+            <!-- Formation -->
+            <div id="test6" class="mainTimeline">
+                <div class="timeline">
+                    <div id="firstCardview" class="timeline-event firstCardview timelineTemplate" hidden>
+                        <div class="name-timeline-key" hidden></div>
+                        <div class="card-timeline-last-updated" hidden></div>
+                        <div class="card timeline-content">
+                            <div style="z-index: 0;" class="card-timeline-image waves-effect waves-block waves-light">
+                                <img class="activator imageTimeline" src="" alt="logo">
+                            </div>
+                            <div class="card-content">
+                                <span class="title card-timeline-title activator grey-text text-darken-4 customCardTitle"></span>
+                                <p class="card-timeline-name"></p>
+                            </div>
+                        </div>
+                        <div class="myBubble timeline-badge white-text">
+                            <span class="timelineDate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
 
