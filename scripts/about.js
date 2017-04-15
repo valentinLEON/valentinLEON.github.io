@@ -35,3 +35,5 @@ if (localStorage.nom != null) {
         $("#githubLink").attr("href", "http://github.com/nicolasOrlandini").append(jsonparsed.nom);
     }
 }
+
+$('.carousel').carousel();
