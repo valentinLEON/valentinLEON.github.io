@@ -1,8 +1,20 @@
 /* Classes objets persos */
 
-.name {
-    font-weight: bold;
-    font-size: 20px;
+.user-name {
+    display: block;
+    margin: auto !important;
+    width: 150px;
+    text-align: center !important; 
+    font-size: 16px !important; 
+    font-weight: Bold !important;
+}
+
+.user-img {
+    margin: auto;
+}
+
+.user-email {
+    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -33,14 +45,6 @@ nav .button-collapse i {
     font-size: 2.7rem !important;
     height: 56px !important;
     line-height: 56px !important;
-}
-
-.onCenter {
-    float: right;
-    margin-right: 45%;
-    font-weight: bold;
-    font-size: 27px;
-    color: black;
 }
 
 body {
@@ -86,68 +90,16 @@ a.customAction:hover {
     color: #ff7b00 !important;
 }
 
-/****************************/
-/*          ABOUT           */
-/****************************/
-
-.main-about {
-    margin-top: 100px !important;
+.github-link {
+    text-align: right;
 }
 
-.avatar-about {
-    width:250px;
-    height:250px;
-    display: block !important;
-    position: relative !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+.navbar-fixed {
+    position: fixed !important; 
+    z-index:1 !important;
 }
 
-.title-about {
-    text-align:center; 
-    font-family:'bttf';
-    margin-top: 40px !important;
-}
-
-.title-card {
-    padding-left: 10px;
-}
-
-
-@media screen and (max-width: 450px) {
-    .scott {
-        margin-left: 14% !important;
-    }
-    .githubLink {
-        font-size: 12px;
-    }
-    .card {
-        margin-top: 30px !important;
-        margin-left: 0 !important; 
-        margin-right: 0 !important;
-    }
-    .card .card-content {
-        padding: 4px !important;
-    }
-
-    .title-card {
-        padding-top: 6%;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    
-    .avatar-about {
-        width: 130px !important;
-        height: 130px !important;
-    }
-
-    .title-about {
-        font-size: 20px !important;
-    }
-
-    .title-card {
-        font-size: 18px !important;
-        padding-top: 3%;
-    }
+.img-creation {
+    width:100px; 
+    height:100px;
 }

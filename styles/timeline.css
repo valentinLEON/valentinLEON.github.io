@@ -90,6 +90,10 @@ span.customCardTitle {
     margin-right: auto;
 }
 
+.card-timeline-image {
+    z-index: 0 !important;
+}
+
 @media (max-width: 450px) {
     .timeline .timeline-event .timeline-content {
         height: calc(50% - 10px) !important;
