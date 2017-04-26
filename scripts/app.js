@@ -1,15 +1,18 @@
-(function() {
+(function () {
     'use strict';
 
     var app = {
         isLoading: true,
         visibleCards: {},
         visibleTimelineCards: {},
+        visibleImage: {},
         spinner: document.querySelector('.loader'),
         cardTemplate: document.querySelector('.cardTemplate'),
         timelineTemplate: document.querySelector('.timelineTemplate'),
+        imageTemplate: document.querySelector('.imageTemplate'),
         container: document.querySelector('.mainCard'),
         containerTimeline: document.querySelector('.mainTimeline .timeline'),
+        containerCarousel: document.querySelector('.carousel'),
         addDialog: document.querySelector('.dialog-container')
     };
 
@@ -18,7 +21,7 @@
      * Methods to update/refresh the UI
      *
      ****************************************************************************/
-    app.updateExpCard = function(data) {
+    app.updateExpCard = function (data) {
         var dataLastUpdated = new Date(data.created);
         var code = data.code
         var description = data.description;
@@ -39,13 +42,9 @@
         card.querySelector('.period').textContent = period;
         // pour ajouter une icône
         //card.querySelector('.fa').classList.add(app.getIconClass(code));
-        if (app.isLoading) {
-            app.spinner.setAttribute('hidden', true);
-            app.container.removeAttribute('hidden');
-            app.isLoading = false;
-        }
+        loading();
     };
-    app.updateSchoolCard = function(data) {
+    app.updateSchoolCard = function (data) {
         var dataLastUpdated = new Date(data.created);
         var customCardTitle = data.customCardTitle;
         var timelineDate = data.timelineDate;
@@ -71,23 +70,46 @@
         card.querySelector('.myBubble').className += " " + color;
         // pour ajouter une icône
         //card.querySelector('.fa').classList.add(app.getIconClass(code));
+        loading();
+    };
+
+    app.updateCarousel = function (data) {
+        // Carousel centre d'intérêts
+        $('.carousel').carousel();
+        var image = app.visibleImage[data.key];
+        var images = data.images;
+        if (!image) {
+            image = app.imageTemplate.cloneNode(true);
+            image.classList.remove('imageTemplate');
+            for (var i = 0; i < images.length; i++) {
+                image.querySelector('a.carousel-item').innerHTML = '<img src="' + images[i] + '">';
+                // $('.carousel-item').append('<img class="imageCarousel" src="' + images[i] + '">');
+
+            }
+            app.visibleImage[data.key] = image;
+        }
+        loading();
+
+    }
+
+    var loading = function () {
         if (app.isLoading) {
             app.spinner.setAttribute('hidden', true);
             app.containerTimeline.removeAttribute('hidden');
             app.isLoading = false;
         }
-    };
+    }
     /*****************************************************************************
      *
      * Methods for dealing with the model
      *
      ****************************************************************************/
-    app.getProject = function(key, label) {
+    app.getProject = function (key, label) {
         // var statement = 'select * from cv.project where woeid=' + key;
         // var url = 'put a url' + statement;
         //Fetch the latest data.
         var request = new XMLHttpRequest();
-        request.onreadystatechange = function() {
+        request.onreadystatechange = function () {
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === 200) {
                     var response = JSON.parse(request.response);
@@ -112,19 +134,19 @@
         request.send();
     };
     // Iterate all of the cards and attempt to get the latest forecast data
-    app.updateSkills = function() {
+    app.updateSkills = function () {
         var keys = Object.keys(app.visibleCards);
-        keys.forEach(function(key) {
+        keys.forEach(function (key) {
             app.getForecast(key);
         });
         var keysT = Object.keys(app.visibleTimelineCards);
-        keysT.forEach(function(key) {
+        keysT.forEach(function (key) {
             app.getForecast(key);
         });
     };
 
     // TODO: récupérer des icônes sympas...
-    app.getIconClass = function(expCode) {
+    app.getIconClass = function (expCode) {
         expCode = parseInt(expCode);
         switch (expCode) {
             case 1:
@@ -136,6 +158,26 @@
             case 6:
         }
     };
+
+    var imagesValentin = {
+        key: '25456',
+        created: '2017-04-16T18:44:00',
+        images: [
+            '../images/er.jpg',
+            '../images/snow.jpg',
+            '../images/snow2.jpg'
+        ]
+    }
+    var imagesNicolas = {
+        key: '25457',
+        created: '2017-04-16T19:44:00',
+        images: [
+            '../images/cm.jpg',
+            '../images/captain.jpg',
+            '../images/nomnomnom.jpg'
+        ]
+    }
+
     /* Objets expérience */
     var updateExperiencesValentin1 = {
         key: '2459115', //2459115
@@ -257,6 +299,8 @@
         app.updateSchoolCard(updateSchoolValentin1);
         app.updateSchoolCard(updateSchoolValentin2);
         app.updateSchoolCard(updateSchoolValentin3);
+
+        app.updateCarousel(imagesValentin);
     } else if (localStorage.nom == "nicolas") {
         app.updateExpCard(updateExperiencesNicolas1);
         app.updateExpCard(updateExperiencesNicolas2);
@@ -269,5 +313,7 @@
         app.updateSchoolCard(updateSchoolNicolas2);
         app.updateSchoolCard(updateSchoolNicolas3);
     }
+
+
 
 })();
