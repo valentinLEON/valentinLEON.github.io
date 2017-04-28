@@ -2,7 +2,7 @@
  * Attention à la version de l'application
  */
 // nom du cache
-var cacheName = 'cerm v1.0.1';
+var cacheName = 'cerm v1.0.2';
 // fichiers à mettre en cache
 var filesToCache = [
     '/',
@@ -36,10 +36,18 @@ var filesToCache = [
     '/images/valrose.jpg',
     '/images/geotweetLP.png',
     '/images/Samaritan.png',
+    '/images/delorean.jpg',
+    '/images/guitare.jpg',
+    '/images/snow.jpg',
+    '/images/snow2.jpg',
+    '/images/nomnomnom.jpg',
+    '/images/er.jpg',
+    '/images/cm.jpg',
+    '/images/captain.jpg',
     '/images/icons/facebook.png',
     '/images/icons/googleplus.png',
     '/images/icons/linkedin.png',
-    '/images/icons/twitter.png',
+    '/images/icons/twitter.png'
 ];
 
 // Mise en place du cache

@@ -3,8 +3,8 @@
 }
 
 .avatar-about {
-    width:250px;
-    height:250px;
+    width: 250px;
+    height: 250px;
     display: block !important;
     position: relative !important;
     margin-left: auto !important;
@@ -12,8 +12,8 @@
 }
 
 .title-about {
-    text-align:center; 
-    font-family:'bttf';
+    text-align: center;
+    font-family: 'bttf';
     margin-top: 40px !important;
 }
 
@@ -22,9 +22,12 @@
 }
 
 .description {
-    margin-top:20px !important;
+    margin-top: 20px !important;
 }
 
+.carousel .indicators .indicator-item.active {
+    background-color: #ff7b00 !important;
+}
 
 @media screen and (max-width: 450px) {
     .scott {
@@ -35,29 +38,25 @@
     }
     .card {
         margin-top: 30px !important;
-        margin-left: 0 !important; 
+        margin-left: 0 !important;
         margin-right: 0 !important;
     }
     .card .card-content {
         padding: 4px !important;
     }
-
     .title-card {
         padding-top: 6%;
     }
 }
 
 @media screen and (max-width: 550px) {
-    
     .avatar-about {
         width: 130px !important;
         height: 130px !important;
     }
-
     .title-about {
         font-size: 20px !important;
     }
-
     .title-card {
         font-size: 18px !important;
         padding-top: 3%;

@@ -2,22 +2,22 @@ var jsonV = {
     "nom": "Valentin LEON",
     "logo": "../images/scott.png",
     "description": "Je suis un jeune développeur, désirant parfaire mes compétences dans le domaine du développement." +
-    "J'ai donc suivi un cursus informatique à l 'IUT de Nice Sophia-Antipolis en licence professionnelle Développement d'" +
-    "Applications Mobile" +
-    "Ce CV représente," +
-    "mes compétences ainsi que mes expériences professionnelles dans le milieu du développement." +
-    "Afin d\'avoir de plus amples renseignements sur mes projets, vous pouvez visiter mon lien github que vous pouvez retrouver ci-dessous."
+        "J'ai donc suivi un cursus informatique à l 'IUT de Nice Sophia-Antipolis en licence professionnelle Développement d'" +
+        "Applications Mobile" +
+        "Ce CV représente," +
+        "mes compétences ainsi que mes expériences professionnelles dans le milieu du développement." +
+        "Afin d\'avoir de plus amples renseignements sur mes projets, vous pouvez visiter mon lien github que vous pouvez retrouver ci-dessous."
 };
 var jsonN = {
     "nom": "Nicolas ORLANDINI",
     "logo": "../images/tardis.png",
     "description": "Je suis un jeune développeur, désirant parfaire mes compétences dans le domaine du développement." +
-    "J'ai donc suivi un cursus informatique à l 'IUT de Nice Sophia-Antipolis en licence professionnelle Développement d'" +
-    "Applications Mobile" +
-    "Ce CV représente," +
-    "mes compétences ainsi que mes expériences professionnelles dans le milieu du développement." +
-    "Afin d\'avoir de plus amples renseignements sur mes projets, vous pouvez visiter mon lien github que vous pouvez retrouver ci-dessous."
-}; 
+        "J'ai donc suivi un cursus informatique à l 'IUT de Nice Sophia-Antipolis en licence professionnelle Développement d'" +
+        "Applications Mobile" +
+        "Ce CV représente," +
+        "mes compétences ainsi que mes expériences professionnelles dans le milieu du développement." +
+        "Afin d\'avoir de plus amples renseignements sur mes projets, vous pouvez visiter mon lien github que vous pouvez retrouver ci-dessous."
+};
 
 var jsonValentin = JSON.stringify(jsonV);
 var jsonNicolas = JSON.stringify(jsonN);
@@ -37,3 +37,4 @@ if (localStorage.nom != null) {
         $("#githubLink").attr("href", "http://github.com/nicolasOrlandini").append(jsonparsed.nom);
     }
 }
+$('.carousel').carousel();
